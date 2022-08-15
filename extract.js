@@ -1,5 +1,5 @@
 const extract = require('extract-inline-css');
 
-extract('./views/index.hbs', {
+extract('./views/trainer.hbs', {
   dist: './dist'
 });

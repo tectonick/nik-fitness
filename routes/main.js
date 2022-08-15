@@ -9,4 +9,12 @@ router.get("/", async (_req, res) => {
   });
 });
 
+router.get("/no-way-to-fail", async (_req, res) => {
+  res.render("trainer.hbs", {
+    title: `The "No-Way-To-Fail" Online Fitness Coaching Program`,
+    description:
+      "Get 1 Week Of My “VIP” Coaching Experience And Life-Changing Results Totally FREE.",
+  });
+});
+
 module.exports = router;
