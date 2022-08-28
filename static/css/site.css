@@ -68,10 +68,7 @@ nav .nav-item:nth-of-type(4) .nav-link{
     animation-delay: 1.1s;
 }
 
-
-
-
-nav .nav-link:hover{
+nav .nav-link:hover {
     color: black;
     background-color: white;
 }

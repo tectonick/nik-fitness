@@ -5,5 +5,6 @@ curl https://raw.githubusercontent.com/git-ftp/git-ftp/master/git-ftp > /bin/git
 chmod 755 /bin/git-ftp
 
 Usage:
+git ftp init - init repos
 git ftp catchup - sync repos
 git ftp push - push commit
