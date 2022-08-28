@@ -1,0 +1,6 @@
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=tectonick_nik-fitness&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=tectonick_nik-fitness)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=tectonick_nik-fitness&metric=bugs)](https://sonarcloud.io/summary/new_code?id=tectonick_nik-fitness)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=tectonick_nik-fitness&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=tectonick_nik-fitness)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=tectonick_nik-fitness&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=tectonick_nik-fitness)
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=tectonick_nik-fitness&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=tectonick_nik-fitness)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=tectonick_nik-fitness&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=tectonick_nik-fitness)
