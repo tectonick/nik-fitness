@@ -461,7 +461,7 @@ footer {
 }
 
 footer #social-img {
-    display: flex;
+    display: inline;
     justify-content: space-around;
 }
 
