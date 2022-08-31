@@ -3,9 +3,9 @@ const router = express.Router();
 
 router.get("/", async (_req, res) => {
   res.render("index.hbs", {
-    title: "TrainedByNik - Your #1 Fitness And Peak Performance Mentor",
+    title: "TrainedByNik - Build A Head-Turning Physique And Live A More Powerful Life",
     description:
-      "To Help You Build Your Dream Body And Obtain The Highest Level Of Execution And Happiness In All Areas Of Life.",
+      "Meet coach Nik | Online fitness coaching | Client success stories | YouTube | Contact",
   });
 });
 
