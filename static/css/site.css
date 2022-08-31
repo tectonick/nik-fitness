@@ -2,6 +2,8 @@ body {
     background-color: black !important;
 }
 
+
+
 h1,
 h2,
 h3,
@@ -108,13 +110,13 @@ section {
 #main-image-container {
     z-index: 21;
     background-color: black;
-    max-height: 700px;
+    max-height: 900px;
     overflow: hidden;
 }
 
 #main-image-container #title-text {
     position: absolute;
-    top: 20%;
+    top: 22%;
     left: 33%;
     z-index: 21;
     transform: translate(-50%, -50%);
@@ -153,7 +155,7 @@ section {
 }
 
 #slogan {
-    background: linear-gradient(90deg, #821212 0%, #000000 100%);
+    background: linear-gradient(90deg, #821212 0%, #000000 90%);
     padding: 20px 10%;
     z-index: 20;
     box-shadow: 0px -2px 5px rgb(0 0 0 / 30%);
@@ -206,11 +208,36 @@ section {
     font-size: 1rem;
 }
 
+@media (min-width: 600px) and (max-width: 1500px) {
+    #stars .star-review h3 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 1500px) {
+    #stars .star-review h3 {
+        font-size: 2rem;
+    }
+}
+
 #stars .star-review p {
-    font-size: 0.8rem;
+    font-size: 1rem;
     color: white;
     padding: 0 10px;
 }
+
+@media (min-width: 600px) and (max-width: 1500px) {
+    #stars .star-review p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 1500px) {
+    #stars .star-review p {
+        font-size: 1.5rem;
+    }
+}
+
 
 #stars .star-review hr {
     background-color: white !important;
@@ -220,13 +247,13 @@ section {
 }
 
 #bio {
-    min-height: 80vw;
+    min-height: 100vw;
     z-index: 19;
     box-shadow: 0px 2px 5px rgb(0 0 0 / 30%);
 }
 
 #coaching {
-    min-height: 60vw;
+    min-height: 51vw;
     z-index: 18;
     box-shadow: 0px 2px 5px rgb(0 0 0 / 30%);
 }
@@ -237,7 +264,7 @@ section {
 
 #youtube {
     z-index: 17;
-    min-height: 60vw;
+    min-height: 55vw;
     box-shadow: 0px 2px 5px rgb(0 0 0 / 30%);
 }
 
@@ -255,11 +282,17 @@ section {
 .text-block p {
     color: white;
     margin-bottom: 15px;
-    font-size: 1.5rem;
+    font-size: 2rem;
+}
+
+@media (min-width: 600px) and (max-width: 1500px) {
+    #bio .text-block p {
+        font-size: 1.5rem;
+    }
 }
 
 .text-block h2 {
-    font-size: 5.5vw;
+    font-size: 5.2vw;
     margin-bottom: 20px;
 }
 
@@ -358,7 +391,7 @@ section {
 .deck-images {
     width: 20%;
     position: absolute;
-    top: 40px;
+    top: 60px;
     left: 11%;
     display: flex;
     flex-direction: column;
@@ -401,7 +434,7 @@ section {
 #bio #bio-images {
     width: 35%;
     position: absolute;
-    top: 20px;
+    top: 40px;
     right: 11%;
     display: flex;
     flex-direction: column;
