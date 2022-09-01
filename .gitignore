@@ -117,6 +117,7 @@ dist
 
 # deploy ftp data
 /deploy/configFTP.ps1
+/deploy/restart.ps1
 
 #local configuration
 config/local.json
