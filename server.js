@@ -34,15 +34,7 @@ function CreateApp() {
   return app;
 }
 
-function CleanTmpFolder() {
-  if (fs.existsSync("./tmp")) {
-    fs.rmdirSync("./tmp", { recursive: true });
-    fs.mkdirSync("./tmp");
-  }
-}
-
 function CreateServer(app) {
-  if (!isDevelopment) CleanTmpFolder();
   // start http server
   const PORT = process.env.PORT || 80;
   app.listen(PORT, () => {

@@ -1,15 +1,17 @@
 {
   "name": "nik-fitness",
   "version": "1.0.0",
-  "description": "",
+  "description": "Landing page for fitness coach Nik Kurdoyak",
   "main": "app.js",
   "scripts": {
     "start": "node app",
     "dev": "nodemon app",
     "git": "git add * && git commit && git push",
+    "git-amend": "git add * && git commit --amend && git push --force",
     "deploy": "git ftp push",
     "restart": "powershell .\\deploy\\restart.ps1",
-    "pipeline": "npm run git && npm run deploy && npm run restart"
+    "status": "powershell .\\deploy\\check-status.ps1",
+    "pipeline": "npm run git && npm run deploy && npm run restart && npm run status"
   },
   "author": "Nick Kiselev",
   "license": "ISC",
@@ -22,7 +24,6 @@
     "express-handlebars": "^6.0.6"
   },
   "devDependencies": {
-    "extract-inline-css": "^1.0.2",
     "nodemon": "^2.0.19"
   }
 }

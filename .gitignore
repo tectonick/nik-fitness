@@ -115,16 +115,12 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
-# deploy ftp data
-/deploy/configFTP.ps1
+# deploy ftp scripts
 /deploy/restart.ps1
+/deploy/config-ftp.ps1
 
 #local configuration
 config/local.json
 
 #rsa keys
 sec/
-
-#gallery images
-static/img/gallery/
-static/img/thumbnails/gallery
