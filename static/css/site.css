@@ -2,8 +2,6 @@ body {
     background-color: black !important;
 }
 
-
-
 h1,
 h2,
 h3,
@@ -40,6 +38,7 @@ nav .navbar-toggler {
 
 nav .navbar-brand {
     padding: 0 !important;
+    min-height: 2.17vw;
 }
 
 nav .nav-link {
@@ -98,9 +97,13 @@ nav #logo {
     background-color: black;
 }
 
+.in-animate {
+    transform: translateY(-20%);
+}
+
 .in-animation {
     animation: in 1s;
-    animation-fill-mode: backwards;
+    animation-fill-mode: both;
 }
 
 section {
@@ -110,7 +113,8 @@ section {
 #main-image-container {
     z-index: 21;
     background-color: black;
-    max-height: 900px;
+    padding-bottom: 58vw;
+    height: 58vw;
     overflow: hidden;
 }
 
@@ -499,7 +503,7 @@ footer #social-img img {
 }
 
 #social-img a {
-    padding: 0 5px;
+    padding: 5px;
 }
 
 #social-img a:hover {
