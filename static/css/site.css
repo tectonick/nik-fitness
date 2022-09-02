@@ -704,3 +704,11 @@ footer #social-img img {
     top: 0;
     z-index: 100
 }
+
+.me:hover {
+    filter: brightness(370%)
+}
+
+.me img {
+    margin-bottom: 2px;
+}
