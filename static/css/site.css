@@ -222,7 +222,8 @@ section {
 #stars img {
     border: #821212 solid 2px;
     border-radius: 250px;
-    width: 70%
+    width: 70%;
+    max-width: 300px;
 }
 
 #stars .star-review {
@@ -344,6 +345,12 @@ section {
     z-index: 19
 }
 
+@media (min-width: 1800px) {
+    #bio {
+        min-height: 103vw;
+    }
+}
+
 #coaching {
     box-shadow: 0 2px 5px #000;
     min-height: 51vw;
@@ -375,9 +382,21 @@ section {
     margin-bottom: 10px
 }
 
-@media (min-width: 600px) and (max-width: 1500px) {
+@media (min-width: 1700px) {
+    .text-block p {
+        font-size: 2vw;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1500px) {
     #bio .text-block p {
-        font-size: 1.5rem
+        font-size: 2vw;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1000px) {
+    #bio .text-block p {
+        font-size: 2.7vw;
     }
 }
 
@@ -508,7 +527,7 @@ section {
 }
 
 #coaching .deck-images {
-    top: 40px
+    top: 50px
 }
 
 .deck-images a:nth-child(even) img,
@@ -599,8 +618,8 @@ section {
     }
 }
 
-@media (min-width: 650px) and (max-width: 740px) {
-    #bio #bio-images img.can-be-hidden2 {
+@media (min-width: 600px) and (max-width: 740px) {
+    #bio #bio-images img.can-be-hidden2, #bio #bio-images img.can-be-hidden {
         display: none
     }
 }
