@@ -1,5 +1,21 @@
+:root {
+    --texture:
+        radial-gradient(black 15%, transparent 14%) 0 0,
+        radial-gradient(black 15%, transparent 14%) 6px 6px,
+        radial-gradient(rgba(255, 255, 255, .08) 15%, transparent 12%) 0 1px,
+        radial-gradient(rgba(255, 255, 255, .08) 15%, transparent 12%) 6px 7px,
+        rgb(12, 12, 12);
+    --texture-size: 12px 12px;
+    --texture-verbose-size: var(--texture-size), var(--texture-size), var(--texture-size), var(--texture-size);
+    --main-text-color: #fff;
+    --accent-color: #8f1919;
+    --hard-shadow: 0 2px 5px #000;
+    --hard-shadow-up: 0 -2px 5px #000;
+    --light-shadow: 0 2px 5px #222;
+}
+
 body {
-    background-color: #000 !important
+    background-color: rgb(0, 0, 0) !important;
 }
 
 h1,
@@ -8,7 +24,7 @@ h3,
 h4,
 h5,
 h6 {
-    color: #fff;
+    color: var(--main-text-color);
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-style: italic
 }
@@ -26,9 +42,9 @@ nav {
     background-blend-mode: multiply;
     background-repeat: no-repeat;
     background-size: cover;
-    box-shadow: 0 2px 5px #000;
+    box-shadow: var(--light-shadow);
     padding: 0 9% !important;
-    z-index: 20
+    z-index: 22
 }
 
 nav .navbar-toggler {
@@ -80,7 +96,7 @@ nav .nav-item:nth-of-type(4) .nav-link {
 }
 
 nav .nav-link:hover {
-    background-color: #fff;
+    background-color: var(--main-text-color);
     color: #000
 }
 
@@ -91,20 +107,22 @@ nav ul.navbar-nav {
 
 nav .nav-link.active,
 nav .nav-link:hover {
-    color: #fff !important
+    color: var(--main-text-color) !important
 }
 
 nav #logo {
     max-width: 55%
 }
 
-@media (min-width: 700px) and (max-width: 992px){
+@media (min-width: 700px) and (max-width: 992px) {
     nav {
         flex-wrap: nowrap !important;
     }
+
     nav .nav-link {
         padding: 1px 10px !important;
     }
+
     .navbar-expand-lg .navbar-collapse {
         display: flex !important;
         flex-basis: auto;
@@ -127,12 +145,8 @@ nav #logo {
     right: 10% !important;
 }
 
-.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon{
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     top: 3%;
-}
-
-#content-wrap {
-    background-color: #000
 }
 
 .in-animate {
@@ -197,8 +211,8 @@ section {
 }
 
 #slogan {
-    background: linear-gradient(90deg, #821212 0%, #000 90%);
-    box-shadow: 0 -2px 5px #000;
+    background: linear-gradient(90deg, var(--accent-color) 0%, #190000 90%);
+    box-shadow: var(--hard-shadow-up);
     padding: 2% 9%;
     z-index: 20
 }
@@ -211,8 +225,10 @@ section {
 
 #stars {
     align-items: flex-start;
-    background-color: #000;
-    box-shadow: 0 2px 5px #000 0 -2px 5px #000;
+    background: var(--texture);
+    background-size: var(--texture-size);
+    box-shadow: var(--hard-shadow) var(--hard-shadow-up);
+    box-shadow: var(--hard-shadow);
     display: flex;
     justify-content: space-between;
     padding: 2% 5%;
@@ -220,7 +236,7 @@ section {
 }
 
 #stars img {
-    border: #821212 solid 2px;
+    border: var(--accent-color) solid 2px;
     border-radius: 250px;
     width: 70%;
     max-width: 300px;
@@ -244,7 +260,7 @@ section {
 }
 
 #stars .star-review p {
-    color: #fff;
+    color: var(--main-text-color);
     font-size: 1rem;
     padding: 0;
 }
@@ -333,14 +349,14 @@ section {
 }
 
 #stars .star-review hr {
-    background-color: #fff !important;
-    border-top: #fff 1px solid !important;
+    background-color: var(--main-text-color) !important;
+    border-top: var(--main-text-color) 1px solid !important;
     opacity: 1 !important;
     width: 100%
 }
 
 #bio {
-    box-shadow: 0 2px 5px #000;
+    box-shadow: var(--hard-shadow);
     min-height: 108vw;
     z-index: 19
 }
@@ -352,7 +368,7 @@ section {
 }
 
 #coaching {
-    box-shadow: 0 2px 5px #000;
+    box-shadow: var(--hard-shadow);
     min-height: 51vw;
     z-index: 18
 }
@@ -362,7 +378,7 @@ section {
 }
 
 #youtube {
-    box-shadow: 0 2px 5px #000;
+    box-shadow: var(--hard-shadow);
     min-height: 55vw;
     z-index: 17
 }
@@ -371,13 +387,16 @@ section {
 #coaching,
 #youtube,
 #contact {
-    background: linear-gradient(180deg, #821212 0%, #000 100%);
+    background:
+        linear-gradient(180deg, var(--accent-color) 0%, rgba(0, 0, 0, 0.4) 100%),
+        var(--texture);
+    background-size: contain, var(--texture-verbose-size);
     padding-bottom: 50px;
     position: relative
 }
 
 .text-block p {
-    color: #fff;
+    color: var(--main-text-color);
     font-size: 2rem;
     margin-bottom: 10px
 }
@@ -429,7 +448,7 @@ section {
 }
 
 #contact .text-block a {
-    color: #fff;
+    color: var(--main-text-color);
     font-size: 1.5rem;
     font-weight: 500;
     text-decoration: none;
@@ -443,7 +462,7 @@ section {
 }
 
 #contact .text-block a:hover {
-    color: #821212
+    color: var(--accent-color)
 }
 
 #contact .contact-img {
@@ -463,10 +482,10 @@ section {
 
 .action-block a {
     background-color: #000;
-    border: #fff solid 2px;
+    border: var(--main-text-color) solid 2px;
     border-radius: 3px;
     box-shadow: 5px 5px #3f0909;
-    color: #fff;
+    color: var(--main-text-color);
     display: block;
     font-size: 2.5vw;
     font-style: italic;
@@ -479,9 +498,9 @@ section {
 }
 
 .action-block a:hover {
-    border: #fff solid 2px;
+    border: var(--main-text-color) solid 2px;
     box-shadow: none;
-    color: #fff;
+    color: var(--main-text-color);
     transform: translateX(5px) translateY(5px)
 }
 
@@ -515,7 +534,7 @@ section {
 }
 
 .deck-images img {
-    border: #fff solid 2px;
+    border: var(--main-text-color) solid 2px;
     border-radius: 10px;
     margin-bottom: -25%;
     transition: filter .3s;
@@ -619,21 +638,23 @@ section {
 }
 
 @media (min-width: 600px) and (max-width: 740px) {
-    #bio #bio-images img.can-be-hidden2, #bio #bio-images img.can-be-hidden {
+
+    #bio #bio-images img.can-be-hidden2,
+    #bio #bio-images img.can-be-hidden {
         display: none
     }
 }
 
 #bio #bio-images img {
-    border: #fff solid 2px;
+    border: var(--main-text-color) solid 2px;
     border-radius: 10px;
     max-width: 100%
 }
 
 footer {
     background-color: #000;
-    border-top: #821212 solid 3px;
-    color: #fff;
+    border-top: var(--accent-color) solid 3px;
+    color: var(--main-text-color);
     display: flex;
     justify-content: space-evenly;
     padding: 10px 0
@@ -663,7 +684,7 @@ footer #social-img img {
 
 @keyframes in-buttons {
     0% {
-        background-color: #fff;
+        background-color: var(--main-text-color);
         opacity: 0
     }
 
@@ -715,8 +736,8 @@ footer #social-img img {
 }
 
 .top-progress-bar {
-    background: #fff;
-    border-bottom: 1px solid #821212;
+    background: var(--main-text-color);
+    border-bottom: 1px solid var(--accent-color);
     height: 2px;
     left: 0;
     position: fixed;
