@@ -36,10 +36,18 @@ span {
 
 span {
     font-family: inherit;
+    font-size: inherit;
 }
 
 p {
     font-family: Helvetica, Arial, sans-serif;
+    font-size: 2rem;
+}
+
+@media (min-width: 1700px) {
+    p {
+        font-size: 2vw
+    }
 }
 
 nav {
@@ -166,6 +174,8 @@ nav #logo {
 section {
     position: relative;
     width: 100%;
+    overflow: hidden;
+    margin-bottom: 0;
 }
 
 section h2,
@@ -260,7 +270,7 @@ section h3 {
     text-decoration: none;
 }
 
-.texture-carbon{
+.texture-carbon {
     background: var(--texture);
     background-size: var(--texture-size);
     box-shadow: var(--hard-shadow) var(--hard-shadow-up);
@@ -414,20 +424,13 @@ section h3 {
 }
 
 #contact {
-    z-index: 16
+    z-index: 15
 }
 
 #youtube {
     box-shadow: var(--hard-shadow);
     min-height: 55vw;
     z-index: 17
-}
-
-.gradient-accent-down-to-black{
-    background:
-    linear-gradient(180deg, var(--accent-color) 0%, rgba(0, 0, 0, 0.4) 100%),
-    var(--texture);
-background-size: contain, var(--texture-verbose-size);
 }
 
 #bio,
@@ -440,21 +443,6 @@ background-size: contain, var(--texture-verbose-size);
 
 .text-block p {
     margin-bottom: 10px
-}
-
-p {
-    color: var(--main-text-color);
-    font-size: 2rem;
-}
-
-span {
-    font-size: inherit;
-}
-
-@media (min-width: 1700px) {
-    p {
-        font-size: 2vw
-    }
 }
 
 @media (min-width: 1000px) and (max-width: 1500px) {
@@ -762,10 +750,6 @@ footer #social-img img {
     background-color: rgba(255, 255, 255, 0.3)
 }
 
-.w-85 {
-    width: 85%
-}
-
 .back-to-top {
     animation: back-to-top-animation 1.5s;
     bottom: 2rem;
@@ -773,10 +757,6 @@ footer #social-img img {
     position: fixed;
     right: 2rem;
     z-index: 100
-}
-
-.hidden {
-    display: none
 }
 
 @keyframes back-to-top-animation {
@@ -819,7 +799,7 @@ footer #social-img img {
     z-index: 22;
 }
 
-#main-video-container #main-play{
+#main-video-container #main-play {
     opacity: 1;
     transition: opacity 1s ease 0s;
 }
@@ -832,19 +812,19 @@ footer #social-img img {
     z-index: 20;
 }
 
-#main-video-container #title-text h1{
+#main-video-container #title-text h1 {
     font-size: 6vw;
     text-decoration: none;
     text-align: start;
 }
 
-#main-video-container #title-text h2{
+#main-video-container #title-text h2 {
     font-size: 2vw;
     text-decoration: none;
     text-align: start;
 }
 
-#main-video-container #title-text #play-main-vimeo-btn{
+#main-video-container #title-text #play-main-vimeo-btn {
     margin: 0;
     margin-left: 10%;
     padding: 10px 20px;
@@ -879,29 +859,17 @@ footer #social-img img {
     height: 48vw;
 }
 
-.underline {
-    text-decoration: underline;
-}
-
-.bold {
-    font-weight: bold;
-}
-
-.accent {
-    color: var(--accent-color) !important;
-}
-
 #pillars #pillars-block {
     margin-bottom: 15px;
 }
 
-#pillars #pillars-block .pillars-texts{
+#pillars #pillars-block .pillars-texts {
     font-size: 2.3vw;
     padding: 0 3%;
 }
 
 
-.pillars-texts .pillar-text:nth-child(2) {
+#pillars .pillars-texts .pillar-text:nth-child(2) {
     float: right;
 }
 
@@ -912,7 +880,7 @@ footer #social-img img {
     margin: 0 auto;
 }
 
-.pillar .icon {
+#pillars .pillar .icon {
     width: 100%;
     margin-right: 10px;
     align-self: center;
@@ -924,42 +892,33 @@ p.name {
 }
 
 #intro {
-    box-shadow: var(--hard-shadow);
-    /* min-height: 55vw; */
     z-index: 21
 }
 
 #pillars {
-    box-shadow: var(--hard-shadow);
-    /* min-height: 55vw; */
     z-index: 20
 }
 
 #success {
-    box-shadow: var(--hard-shadow);
-    text-align: center;
-    /* min-height: 55vw; */
     z-index: 19
 }
 
 #more-success {
-    box-shadow: var(--hard-shadow);
-    text-align: center;
-    /* min-height: 55vw; */
     z-index: 18
 }
 
 #benefits {
-    box-shadow: var(--hard-shadow);
-    text-align: center;
-    /* min-height: 55vw; */
     z-index: 17
 }
 
 #pricing {
-    box-shadow: var(--hard-shadow);
-    /* min-height: 55vw; */
     z-index: 16
+}
+
+#success,
+#more-success,
+#benefits {
+    text-align: center;
 }
 
 #intro .text-block p {
@@ -990,7 +949,7 @@ p.name {
     width: 30%;
 }
 
-#more-success #testimonials .testimonial img{
+#more-success #testimonials .testimonial img {
     width: 100%;
 }
 
@@ -1042,23 +1001,66 @@ p.name {
     width: 100%;
 }
 
-#success .story .stacked-images img{
+#success .story .stacked-images img {
     width: 80%;
     position: relative;
     margin-bottom: -20%;
 }
 
-#success .story .stacked-images img:nth-child(2){
+#success .story .stacked-images img:nth-child(2) {
     left: 30%;
 }
 
+#pricing #pricing-vimeo {
+    width: 100%;
+    height: 56vw;
+    margin-bottom: -5px;
+}
 
+/* Utility */
 .transparent {
     opacity: 0.01 !important;
     transition: opacity 1s;
 }
 
-#pricing #pricing-vimeo {
-    width: 100%;
-    height: 57vw;
+.gradient-accent-down-to-black {
+    background:
+        linear-gradient(180deg, var(--accent-color) 0%, rgba(0, 0, 0, 0.4) 100%),
+        var(--texture);
+    background-size: contain, var(--texture-verbose-size);
+}
+
+.texture-brick {
+    background-image: url('/img/coaching/dark-brick-wall.png');
+    background-repeat: repeat;
+    background-size: 10%;
+}
+
+.texture-scales {
+    background-image: url('/img/coaching/scales.png');
+    background-repeat: repeat;
+}
+
+.block-shadow-down {
+    box-shadow: var(--hard-shadow);
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.accent {
+    color: var(--accent-color) !important;
+}
+
+.w-85 {
+    width: 85%;
+}
+
+.hidden {
+    display: none;
 }
