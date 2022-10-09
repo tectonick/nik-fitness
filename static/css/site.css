@@ -260,12 +260,15 @@ section h3 {
     text-decoration: none;
 }
 
-#stars {
-    align-items: flex-start;
+.texture-carbon{
     background: var(--texture);
     background-size: var(--texture-size);
     box-shadow: var(--hard-shadow) var(--hard-shadow-up);
     box-shadow: var(--hard-shadow);
+}
+
+#stars {
+    align-items: flex-start;
     display: flex;
     justify-content: space-between;
     padding: 2% 5%;
@@ -420,27 +423,37 @@ section h3 {
     z-index: 17
 }
 
+.gradient-accent-down-to-black{
+    background:
+    linear-gradient(180deg, var(--accent-color) 0%, rgba(0, 0, 0, 0.4) 100%),
+    var(--texture);
+background-size: contain, var(--texture-verbose-size);
+}
+
 #bio,
 #coaching,
 #youtube,
 #contact {
-    background:
-        linear-gradient(180deg, var(--accent-color) 0%, rgba(0, 0, 0, 0.4) 100%),
-        var(--texture);
-    background-size: contain, var(--texture-verbose-size);
     padding-bottom: 50px;
     position: relative
 }
 
 .text-block p {
-    color: var(--main-text-color);
-    font-size: 2rem;
     margin-bottom: 10px
 }
 
+p {
+    color: var(--main-text-color);
+    font-size: 2rem;
+}
+
+span {
+    font-size: inherit;
+}
+
 @media (min-width: 1700px) {
-    .text-block p {
-        font-size: 2vw;
+    p {
+        font-size: 2vw
     }
 }
 
@@ -543,6 +556,10 @@ section h3 {
 
 @media (max-width: 600px) {
     .text-block p {
+        font-size: 2.5vw
+    }
+
+    p {
         font-size: 2.5vw
     }
 }
@@ -879,8 +896,8 @@ footer #social-img img {
 }
 
 #pillars #pillars-block .pillars-texts{
-    font-size: 1.3rem;
-    padding: 0 20%;
+    font-size: 2.3vw;
+    padding: 0 3%;
 }
 
 
@@ -890,7 +907,7 @@ footer #social-img img {
 
 #pillars #pillars-block #pillars-img {
     width: 80%;
-    max-width: 500px;
+    max-width: 700px;
     display: block;
     margin: 0 auto;
 }
@@ -920,18 +937,21 @@ p.name {
 
 #success {
     box-shadow: var(--hard-shadow);
+    text-align: center;
     /* min-height: 55vw; */
     z-index: 19
 }
 
 #more-success {
     box-shadow: var(--hard-shadow);
+    text-align: center;
     /* min-height: 55vw; */
     z-index: 18
 }
 
 #benefits {
     box-shadow: var(--hard-shadow);
+    text-align: center;
     /* min-height: 55vw; */
     z-index: 17
 }
