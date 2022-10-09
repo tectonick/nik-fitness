@@ -815,7 +815,7 @@ footer p {
     top: 4%;
     left: 12%;
     width: 55%;
-    z-index: 20;
+    z-index: 22;
 }
 
 #main-video-container #title-text h1 {
@@ -837,14 +837,6 @@ footer p {
     width: fit-content;
 }
 
-
-#main-video-container #main-vimeo {
-    position: absolute;
-    width: 100%;
-    height: 55vw;
-    transition: opacity 0.5s;
-}
-
 #main-video-container #strip-image-coaching {
     filter: drop-shadow(2px 2px 5px #222);
     left: -20%;
@@ -853,13 +845,13 @@ footer p {
     position: absolute;
     top: 0;
     width: 40%;
-    z-index: 20
+    z-index: 22
 }
 
 #main-video-container #main-play-image {
     position: absolute;
     width: 100%;
-    z-index: 19;
+    z-index: 21;
     opacity: 1;
     transition: opacity 0.1s;
     height: 48vw;
@@ -897,28 +889,32 @@ p.name {
     font-weight: bold;
 }
 
-#intro {
+#promo {
     z-index: 21
 }
 
-#pillars {
+#intro {
     z-index: 20
 }
 
-#success {
+#pillars {
     z-index: 19
 }
 
-#more-success {
+#success {
     z-index: 18
 }
 
-#benefits {
+#more-success {
     z-index: 17
 }
 
-#pricing {
+#benefits {
     z-index: 16
+}
+
+#pricing {
+    z-index: 15
 }
 
 #success,
@@ -1017,7 +1013,7 @@ p.name {
     left: 30%;
 }
 
-#pricing #pricing-vimeo {
+#pricing #pricing-vimeo, #promo #promo-vimeo {
     width: 100%;
     height: 56vw;
     padding-bottom: 0;
@@ -1036,6 +1032,12 @@ p.name {
 @media (min-width: 1700px) {
     #coaching-page p{
         font-size: 1.5vw;
+    }
+}
+
+@media (max-width: 750px) {
+    #coaching-page p{
+        font-size: 1rem;
     }
 }
 
