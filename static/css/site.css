@@ -505,6 +505,10 @@ section h3 {
     transition: color .3s
 }
 
+#contact .action-block a {
+    width: 50%;
+}
+
 @media (max-width: 600px) {
     #contact .text-block a {
         font-size: 1rem
@@ -535,7 +539,7 @@ section h3 {
     border: var(--main-text-color) solid 2px;
     border-radius: 3px;
     box-shadow: 5px 5px #3f0909;
-    color: var(--main-text-color);
+    color: var(--main-text-color) !important;
     display: block;
     font-size: 2.5vw;
     font-style: italic;
@@ -810,18 +814,17 @@ footer p {
 }
 
 /* Coaching */
-
 #coaching-page {
     position: relative;
     z-index: 21;
 }
 
-#coaching-page p{
+#coaching-page p {
     font-size: 1.5rem;
 }
 
 @media (min-width: 1700px) {
-    #coaching-page p{
+    #coaching-page p {
         font-size: 1.5vw;
     }
 
@@ -830,21 +833,21 @@ footer p {
     }
 }
 
-@media (min-width: 1200px) and (max-width: 1600px){
+@media (min-width: 1200px) and (max-width: 1600px) {
     #coaching-page .testimonial .whois {
         font-size: 1.1rem;
     }
 }
 
 @media (max-width: 750px) {
-    #coaching-page p{
+    #coaching-page p {
         font-size: 1rem;
     }
 }
 
 #main-video-container {
     background-color: #000;
-    height: 48vw;
+    height: 58vw;
     overflow: hidden;
     padding-bottom: 48vw;
     z-index: 22;
@@ -859,7 +862,7 @@ footer p {
     position: absolute;
     top: 4%;
     left: 13%;
-    width: 50%;
+    width: 46%;
     z-index: 22;
 }
 
@@ -867,6 +870,7 @@ footer p {
     font-size: 6vw;
     text-decoration: none;
     text-align: start;
+    text-shadow: 1.5px 1.5px 3px #000;
 }
 
 #main-video-container #title-text h2 {
@@ -874,16 +878,18 @@ footer p {
     text-decoration: none;
     text-align: start;
     margin-top: 10px;
+    text-shadow: 3px 3px 6px #000;
 }
 
 #main-video-container #title-text #main-action-block {
     display: flex;
     margin-top: 10px;
-    margin-left: 10%;
 }
 
 #main-video-container #title-text #main-action-block a {
-    margin: 0 10px;
+    margin: 0;
+    margin-right: 15px;
+    margin-left: 0;
     padding: 10px 20px;
     width: fit-content;
 }
@@ -896,13 +902,10 @@ footer p {
     }
 }
 
-
-
-
 #main-video-container #strip-image-coaching {
     filter: drop-shadow(2px 2px 5px #222);
     left: -20%;
-    height: 48vw;
+    height: 58vw;
     max-height: 100%;
     position: absolute;
     top: 0;
@@ -913,17 +916,15 @@ footer p {
 #main-video-container #main-play-image {
     position: absolute;
     width: 100%;
+    left: 1.4%;
     z-index: 21;
     opacity: 1;
     transition: opacity 0.1s;
-    height: 48vw;
+    height: 58vw;
 }
 
-
-
-
 #pillars #pillars-detailed {
-    margin-top: 25px;
+    margin-top: 55px;
 }
 
 #pillars #pillars-block {
@@ -935,13 +936,16 @@ footer p {
     padding: 0 3%;
 }
 
+.pillar {
+    margin: 25px 0;
+}
 
 #pillars .pillars-texts .pillar-text:nth-child(2) {
     float: right;
 }
 
 #pillars #pillars-block #pillars-img {
-    width: 80%;
+    width: 60%;
     max-width: 700px;
     display: block;
     margin: 0 auto;
@@ -1027,7 +1031,8 @@ p.name {
 #more-success #transformations {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
+    column-gap: 20px;
     row-gap: 15px;
 }
 
@@ -1059,6 +1064,20 @@ p.name {
     margin-bottom: 20px;
 }
 
+#success .results p {
+    font-size: 1.7rem;
+}
+
+@media (max-width: 750px) {
+    #success p {
+        font-size: 1.4rem;
+    }
+
+    #success .results p {
+        font-size: 1.4rem;
+    }
+}
+
 #success hr {
     margin: 1rem auto 3rem;
     border: 0;
@@ -1085,18 +1104,59 @@ p.name {
     width: 75%;
     left: -12.5%;
     position: relative;
-    margin-bottom: -15%;
+    margin-bottom: -18%;
+}
+
+#success .story .stacked-tight img {
+    margin-bottom: -25%;
 }
 
 #success .story .stacked-images img:nth-child(2) {
     left: 12.5%;
 }
 
-#pricing #pricing-vimeo, #promo #promo-vimeo {
-    width: 100%;
-    height: 56vw;
+#vimeo-container {
+    display: flex;
+    margin: 10px 0;
+    align-items: center;
+}
+
+#vimeo-container .arrow {
+    padding: 20px;
+    margin: 10px;
+    width: 20%;
+    height: fit-content;
+}
+
+#pricing #pricing-vimeo,
+#promo #promo-vimeo {
+    width: 60%;
+    height: 35vw;
     padding-bottom: 0;
-    margin-bottom: -20px;
+}
+
+@media (min-width: 0) and (max-width: 700px) {
+
+    #pricing #pricing-vimeo,
+    #promo #promo-vimeo {
+        width: 100%;
+        height: 55vw;
+        margin-bottom: -20px;
+    }
+
+    #vimeo-container .arrow {
+        display: none;
+    }
+
+    #promo h2,
+    #pricing h2 {
+        display: none;
+    }
+
+    #vimeo-container {
+        padding: 0;
+        margin: 0;
+    }
 }
 
 #more-success h4 {
@@ -1114,7 +1174,7 @@ p.name {
         font-size: 1.3rem !important;
     }
 
-    #more-success #transformations img{
+    #more-success #transformations img {
         width: 45%;
     }
 }
@@ -1163,7 +1223,6 @@ p.name {
         padding: 0 0;
     }
 }
-
 
 /* Utility */
 .transparent {
@@ -1232,4 +1291,8 @@ p.name {
 
 .hidden {
     display: none;
+}
+
+.rotated180 {
+    transform: rotateZ(180deg);
 }
