@@ -15,6 +15,11 @@
     --light-shadow: 0 2px 5px #222;
 }
 
+@font-face {
+    font-family: Impact;
+    src: url("/assets/impact.ttf");
+}
+
 body {
     background-color: rgb(0, 0, 0) !important;
 }
@@ -43,6 +48,7 @@ span {
 p {
     font-family: Helvetica, Arial, sans-serif;
     font-size: 2rem;
+    margin-bottom: 0.6rem !important;
 }
 
 @media (min-width: 1700px) {
@@ -424,7 +430,6 @@ section h3 {
 }
 
 #bio {
-    box-shadow: var(--hard-shadow);
     min-height: 108vw;
     z-index: 19
 }
@@ -436,7 +441,6 @@ section h3 {
 }
 
 #coaching {
-    box-shadow: var(--hard-shadow);
     min-height: 51vw;
     z-index: 18
 }
@@ -446,7 +450,6 @@ section h3 {
 }
 
 #youtube {
-    box-shadow: var(--hard-shadow);
     min-height: 55vw;
     z-index: 17
 }
@@ -924,11 +927,11 @@ footer p {
 }
 
 #pillars #pillars-detailed {
-    margin-top: 55px;
+    margin-top: 25px;
 }
 
 #pillars #pillars-block {
-    margin-bottom: 15px;
+    margin: 15px 0;
 }
 
 #pillars #pillars-block .pillars-texts {
@@ -945,7 +948,7 @@ footer p {
 }
 
 #pillars #pillars-block #pillars-img {
-    width: 60%;
+    width: 40%;
     max-width: 700px;
     display: block;
     margin: 0 auto;
@@ -1060,6 +1063,10 @@ p.name {
     margin-bottom: 10px;
 }
 
+#benefits #benefits-items p {
+    font-size: 1.3rem;
+}
+
 #success .row {
     margin-bottom: 20px;
 }
@@ -1131,8 +1138,10 @@ p.name {
 #pricing #pricing-vimeo,
 #promo #promo-vimeo {
     width: 60%;
-    height: 35vw;
+    height: 32.5vw;
     padding-bottom: 0;
+    border: var(--main-text-color) solid 2px;
+    border-radius: 10px;
 }
 
 @media (min-width: 0) and (max-width: 700px) {
@@ -1142,6 +1151,8 @@ p.name {
         width: 100%;
         height: 55vw;
         margin-bottom: -20px;
+        border: none;
+        border-radius: 0;
     }
 
     #vimeo-container .arrow {
@@ -1201,7 +1212,7 @@ p.name {
     }
 
     #benefits #benefits-items .benefit .icon {
-        width: 40%;
+        width: 30%;
     }
 }
 
@@ -1213,15 +1224,29 @@ p.name {
     }
 
     #pillars .pillar .icon {
-        width: 40%;
+        width: 30%;
         margin: 0 auto 15px;
         align-self: center;
     }
 
     #pillars #pillars-block .pillars-texts {
-        font-size: 2.8vw;
+        font-size: 3.5vw;
         padding: 0 0;
     }
+
+    #pillars #pillars-block #pillars-img {
+        width: 70%;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 775px) {
+    #pillars #pillars-block .pillars-texts {
+        font-size: 2.5vw;
+    }
+}
+
+.testiomial-text {
+    margin-top: 0.5rem;
 }
 
 /* Utility */
@@ -1242,7 +1267,7 @@ p.name {
     background: var(--texture);
     background-size: var(--texture-size);
     box-shadow: var(--hard-shadow) var(--hard-shadow-up);
-    box-shadow: var(--hard-shadow);
+
 }
 
 
@@ -1270,7 +1295,7 @@ p.name {
 }
 
 .block-neon-shadow-down {
-    box-shadow: var(--neon-shadow);
+    box-shadow: var(--neon-shadow) !important;
 }
 
 .underline {
