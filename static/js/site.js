@@ -23,6 +23,9 @@ document.querySelectorAll("#main-action-block a").forEach(link=>{
     setTimeout(()=>{
       let sectionId = link.href.substring(link.href.indexOf('#'));
       document.querySelector(sectionId).scrollIntoView();
+      setTimeout(()=>{
+        document.querySelector(sectionId).scrollIntoView();
+      },2000)      
     }, 1000)
   })
 })
