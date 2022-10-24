@@ -9,7 +9,23 @@ const observer = new IntersectionObserver((entries) => {
   });
 });
 
-document.querySelectorAll(".in-animate").forEach((el) => observer.observe(el));
+let toAnimate = document.querySelectorAll(".in-animate");
+toAnimate.forEach((el) => observer.observe(el));
+
+
+// TODO FIX
+document.querySelectorAll("#main-action-block a").forEach(link=>{
+  link.addEventListener("click", (e)=>{
+    e.preventDefault();
+    toAnimate.forEach(el=>{
+      el.classList.add("in-animation");
+    })
+    setTimeout(()=>{
+      let sectionId = link.href.substring(link.href.indexOf('#'));
+      document.querySelector(sectionId).scrollIntoView();
+    }, 1000)
+  })
+})
 
 //Scroll to top button
 const showOnPx = 200;
