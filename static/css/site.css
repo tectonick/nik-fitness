@@ -8,7 +8,7 @@
     --texture-size: 12px 12px;
     --texture-verbose-size: var(--texture-size), var(--texture-size), var(--texture-size), var(--texture-size);
     --main-text-color: #fff;
-    --accent-color: #8f1919;
+    --accent-color: #b81515;
     --hard-shadow: 0 2px 5px #000;
     --hard-shadow-up: 0 -2px 5px #000;
     --neon-shadow: 0 2px 20px rgb(50 4 4 / 0.4);
@@ -618,7 +618,7 @@ section h3 {
 
 .bordered-img {
     border: var(--main-text-color) solid 2px;
-    border-radius: 10px;
+    border-radius: 6px;
     transition: filter .3s;
 }
 
@@ -737,7 +737,7 @@ a:hover .video-img {
 
 #bio #bio-images img {
     border: var(--main-text-color) solid 2px;
-    border-radius: 10px;
+    border-radius: 6px;
     max-width: 100%
 }
 
@@ -1018,7 +1018,9 @@ p.name {
 }
 
 #pricing {
-    z-index: 15
+    z-index: 15;
+    display: inline-flex;
+    flex-direction: column;
 }
 
 #success,
@@ -1169,7 +1171,7 @@ p.name {
     height: 32.5vw;
     padding-bottom: 0;
     border: var(--main-text-color) solid 2px;
-    border-radius: 10px;
+    border-radius: 6px;
 }
 
 @media (min-width: 0) and (max-width: 700px) {
@@ -1277,6 +1279,100 @@ p.name {
     margin-top: 0.5rem;
 }
 
+#period-selector {
+    display: inline-block;
+    border-radius: 6px;
+    width: max-content;
+    text-align: center;
+    margin: auto;
+    font-size: 1.5rem;
+    overflow: auto;
+}
+
+#prices-container {
+    display: flex;
+    margin: auto;
+    padding-top: 30px;
+    justify-content: center;
+    row-gap: 10px;
+    column-gap: 30px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.feature-text {
+    display: inline;
+}
+
+.price-card {
+    position: relative;
+    width: 300px;
+    background-color: black;
+    border-radius: 6px;
+    padding: 15px;
+    color: white;
+    border: var(--main-text-color) solid 2px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* .price-card:hover {
+    transform: scale(102%);
+    box-shadow: 0 0 11px rgba(255, 0, 0, 0.436);
+} */
+
+.period-button {
+    width: 150px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    background: black;
+    padding: 5px 5px;
+    margin: 0 auto;
+}
+
+.period-button:hover, .period-button.period-selected {
+    color: var(--main-text-color);
+    background: var(--accent-color);
+}
+
+.feature-icon {
+    width: 20px;
+    margin-right: 5px;
+}
+
+.price-title, .price-cost {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.price-title {
+    font-size: 1.5rem;
+}
+
+.monthly-selected {
+    display: inline;
+}
+
+.annually-selected {
+    display: none;
+}
+
+.price-best-tag {
+    position: absolute;
+    right: -15px;
+    top: -15px;
+    background-color: green;
+    color: #fff;
+    border-radius: 6px;
+    padding: 5px;
+}
+
+#pre-prices p {
+    padding: 0 30%;
+    font-size: 1rem;
+}
+
 /* Utility */
 .transparent {
     opacity: 0.01 !important;
@@ -1298,12 +1394,18 @@ p.name {
 
 }
 
-
 .texture-brick {
     background-color: #000;
     background-image: url('/img/coaching/dark-brick-wall.png');
     background-repeat: repeat;
     background-size: 10%;
+}
+
+.texture-prism {
+    background-color: #000;
+    background-image: url('/img/prism.png');
+    background-repeat: repeat;
+    background-size: 100%;
 }
 
 @media (max-width: 750px) {
@@ -1336,6 +1438,7 @@ p.name {
 
 .accent {
     color: var(--accent-color) !important;
+    text-shadow: 1px 1px 1px rgb(155 155 155 / 85%);
 }
 
 .w-85 {

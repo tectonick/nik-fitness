@@ -58,4 +58,24 @@ const goToTop = () => {
   document.body.scrollIntoView();
 };
 
+const monthlyPrices = document.querySelectorAll(".monthly-selected");
+const annuallyPrices = document.querySelectorAll(".annually-selected");
+const monthlyPricesBtn = document.querySelector("#period-monthly-btn");
+const annuallyPricesBtn = document.querySelector("#period-annually-btn");
+
+document.querySelector("#period-monthly-btn")?.addEventListener("click", (e)=>{
+  e.preventDefault();
+  monthlyPricesBtn.classList.add("period-selected");
+  annuallyPricesBtn.classList.remove("period-selected");
+  monthlyPrices.forEach(price => price.style.display = "inline");
+  annuallyPrices.forEach(price => price.style.display = "none");
+});
+document.querySelector("#period-annually-btn")?.addEventListener("click", (e)=>{
+  e.preventDefault();
+  monthlyPricesBtn.classList.remove("period-selected");
+  annuallyPricesBtn.classList.add("period-selected");
+  monthlyPrices.forEach(price => price.style.display = "none");
+  annuallyPrices.forEach(price => price.style.display = "inline");
+});;
+
 backToTopButton.addEventListener("click", goToTop);
