@@ -1295,7 +1295,7 @@ p.name {
     padding-top: 30px;
     justify-content: center;
     row-gap: 10px;
-    column-gap: 30px;
+    column-gap: 50px;
     margin-bottom: 30px;
     flex-wrap: wrap;
 }
@@ -1306,10 +1306,10 @@ p.name {
 
 .price-card {
     position: relative;
-    width: 300px;
+    max-width: 400px;
     background-color: black;
     border-radius: 6px;
-    padding: 15px;
+    padding: 20px;
     color: white;
     border: var(--main-text-color) solid 2px;
     transition: transform 0.3s, box-shadow 0.3s;
@@ -1334,6 +1334,10 @@ p.name {
 .period-button:hover, .period-button.period-selected {
     color: var(--main-text-color);
     background: var(--accent-color);
+}
+
+.feature {
+    margin-bottom: 8px;
 }
 
 .feature-icon {
@@ -1368,9 +1372,12 @@ p.name {
     padding: 5px;
 }
 
+#pre-prices p, #post-prices p {
+    font-size: 1rem;
+}
+
 #pre-prices p {
     padding: 0 30%;
-    font-size: 1rem;
 }
 
 /* Utility */
