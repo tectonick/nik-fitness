@@ -892,7 +892,7 @@ footer p {
 #main-video-container #title-text {
     position: absolute;
     top: 2.8%;
-    left: 13%;
+    left: 11%;
     width: 46%;
     z-index: 22;
 }
@@ -947,7 +947,6 @@ footer p {
 #main-video-container #main-play-image {
     position: absolute;
     width: 100%;
-    left: 1.4%;
     z-index: 21;
     opacity: 1;
     transition: opacity 0.1s;
@@ -956,6 +955,10 @@ footer p {
 
 #pillars #pillars-detailed {
     margin-top: 25px;
+}
+
+#pillars #pillars-detailed h3, #success .story-title{
+    font-size: 2.5vw;
 }
 
 #pillars #pillars-block {
@@ -993,10 +996,6 @@ p.name {
     font-weight: bold;
 }
 
-#promo {
-    z-index: 21
-}
-
 #intro {
     z-index: 20
 }
@@ -1009,7 +1008,7 @@ p.name {
     z-index: 18
 }
 
-#more-success {
+#success {
     z-index: 17
 }
 
@@ -1045,7 +1044,7 @@ p.name {
     margin-bottom: 30px;
 }
 
-#more-success #testimonials {
+#success #testimonials {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -1053,24 +1052,12 @@ p.name {
     margin-bottom: 25px;
 }
 
-#more-success #testimonials .testimonial {
+#success #testimonials .testimonial {
     width: 30%;
 }
 
-#more-success #testimonials .testimonial img {
+#success #testimonials .testimonial img {
     width: 100%;
-}
-
-#more-success #transformations {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    column-gap: 20px;
-    row-gap: 15px;
-}
-
-#more-success #transformations img {
-    width: 30%;
 }
 
 #benefits #benefits-items {
@@ -1124,9 +1111,12 @@ p.name {
     width: 100%;
 }
 
+#success .story .story-title {
+    margin-bottom: 30px;
+}
+
 #success .story .video-img {
     width: 100%;
-
 }
 
 #success .story img {
@@ -1154,7 +1144,7 @@ p.name {
 
 #vimeo-container {
     display: flex;
-    margin: 10px 0;
+    margin: 10px 0 40px 0;
     align-items: center;
 }
 
@@ -1166,7 +1156,7 @@ p.name {
 }
 
 #pricing #pricing-vimeo,
-#promo #promo-vimeo {
+#success #promo-vimeo {
     width: 60%;
     height: 32.5vw;
     padding-bottom: 0;
@@ -1177,7 +1167,7 @@ p.name {
 @media (min-width: 0) and (max-width: 700px) {
 
     #pricing #pricing-vimeo,
-    #promo #promo-vimeo {
+    #success #promo-vimeo {
         width: 100%;
         height: 55vw;
         margin-bottom: -20px;
@@ -1189,7 +1179,7 @@ p.name {
         display: none;
     }
 
-    #promo h2,
+    #success h2,
     #pricing h2 {
         display: none;
     }
@@ -1200,34 +1190,34 @@ p.name {
     }
 }
 
-#more-success h4 {
+#success h4 {
     font-size: 2rem !important;
 }
 
 @media (min-width: 1050px) and (max-width: 1400px) {
-    #more-success h4 {
+    #success h4 {
         font-size: 1.5rem !important;
     }
 }
 
 @media (min-width: 0px) and (max-width: 1050px) {
-    #more-success h4 {
+    #success h4 {
         font-size: 1.3rem !important;
     }
 
-    #more-success #transformations img {
+    #success #transformations img {
         width: 45%;
     }
 }
 
 @media (min-width: 0px) and (max-width: 500px) {
-    #more-success #testimonials .testimonial {
+    #success #testimonials .testimonial {
         width: 100%;
     }
 }
 
 @media (min-width: 500px) and (max-width: 1050px) {
-    #more-success #testimonials .testimonial {
+    #success #testimonials .testimonial {
         width: 45%;
     }
 
