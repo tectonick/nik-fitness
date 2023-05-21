@@ -124,3 +124,6 @@ config/local.json
 
 #rsa keys
 sec/
+
+#macos
+.DS_Store
