@@ -236,7 +236,7 @@ section h3 {
         font-size: 1.2rem !important;
     }
 
-    #contact .text-block p {
+    #contact .side-block p {
         margin: 5px auto !important;
         width: 100% !important;
         font-size: 0.8rem;
@@ -245,55 +245,26 @@ section h3 {
 
 #main-image-container {
     background-color: #000;
-    height: 58vw;
     overflow: hidden;
-    padding-bottom: 58vw;
     z-index: 21
 }
 
 #main-image-container #title-text {
     font-weight: 700;
-    left: 33%;
+    left: 20%;
     position: absolute;
     text-align: center;
     text-shadow: 1.5px 1.5px 3px #000;
-    top: 22%;
-    transform: translate(-50%, -50%);
+    top: 55%;
     z-index: 21
-}
-
-#main-image-container h2 {
-    text-decoration: none;
-}
-
-@media (max-width: 600px) {
-    #main-image-container #title-text {
-        top: 22%
-    }
 }
 
 #main-image-container #title-text h1 {
     font-size: 6.5vw
 }
 
-#main-image-container #title-text .sub-h {
-    font-size: 3vw;
-    margin-top: 0;
-}
-
 #main-image-container #main-image {
-    margin-left: 4.5%;
-    width: 95.5%
-}
-
-#main-image-container #strip-image {
-    filter: drop-shadow(2px 2px 5px #222);
-    left: -38%;
-    max-height: 100%;
-    position: absolute;
-    top: 0;
-    width: 80%;
-    z-index: 20
+    width: 100%
 }
 
 #main-image-container #strip-image-coaching {
@@ -306,174 +277,55 @@ section h3 {
     z-index: 20
 }
 
-#slogan {
-    background: linear-gradient(90deg, var(--accent-color) 0%, #190000 90%);
-    box-shadow: var(--hard-shadow-up);
-    padding: 2% 9%;
-    z-index: 20
+#intro {
+    z-index: 19;
+    background: url("/img/intro.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-#slogan h2 {
-    font-size: 3.3vw;
-    margin: 0 !important;
+#intro .text-block p, #coaching .text-block p{
     text-align: center;
-    text-decoration: none;
+    padding: 0 20px;
+    margin: 30px;
+    font-size: 1.2vw;
 }
 
-#stars {
-    align-items: flex-start;
-    display: flex;
-    justify-content: space-between;
-    padding: 2% 5%;
-    z-index: 20
+#intro u, #coaching u{
+    font-size: 3vw;
 }
 
-#stars img {
-    border: var(--accent-color) solid 2px;
-    border-radius: 250px;
-    width: 70%;
-    max-width: 300px;
+#intro .side-block{
+    width: 55%;
+    margin-bottom: 50px;
 }
 
-#stars .star-review {
-    align-items: center;
-    display: flex;
-    flex-basis: 30%;
-    flex-direction: column;
-    justify-content: flex-start
+#coaching{
+    z-index: 18;
+    background: url("/img/coaching.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-#stars .star-review * {
-    text-align: center
-}
-
-#stars .star-review h3 {
-    font-size: 1rem;
-    margin: 0;
-}
-
-#stars .star-review p {
-    color: var(--main-text-color);
-    font-size: 1rem;
-    padding: 0;
-}
-
-#stars .star-review hr {
-    margin: 20px 0;
-}
-
-@media (max-width: 865px) {
-    #stars {
-        align-items: center;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around
-    }
-
-    #stars .star-review {
-        align-self: flex-start;
-        flex-basis: 45%
-    }
-
-    #stars .star-review:nth-child(2n+3) {
-        align-self: flex-start;
-        flex-basis: 90%
-    }
-
-    #stars .star-review:nth-child(2n+3) img {
-        width: 35%
-    }
-
-    #stars .star-review:nth-child(2n+3) p {
-        margin-bottom: 0
-    }
-
-    #stars br.can-be-hidden {
-        display: none
-    }
-
-    #stars .star-review img {
-        margin-bottom: 8px;
-    }
-
-    #stars .star-review h3 {
-        margin-bottom: 5px;
-    }
-
-    #stars .star-review hr {
-        margin: 8px 0;
-    }
-}
-
-@media (min-width: 600px) and (max-width: 1500px) {
-    #stars .star-review h3 {
-        font-size: 1.5rem
-    }
-}
-
-@media (min-width: 1500px) {
-    #stars .star-review h3 {
-        font-size: 2rem
-    }
-}
-
-@media (min-width: 600px) and (max-width: 1500px) {
-    #stars .star-review p {
-        font-size: 1.2rem
-    }
-}
-
-@media (max-width: 400px) {
-    #stars .star-review h3 {
-        font-size: .8rem
-    }
-}
-
-@media (max-width: 600px) {
-    #stars .star-review p {
-        font-size: .7rem
-    }
-}
-
-@media (min-width: 1500px) {
-    #stars .star-review p {
-        font-size: 1.5rem
-    }
-}
-
-#stars .star-review hr {
-    background-color: var(--main-text-color) !important;
-    border-top: var(--main-text-color) 1px solid !important;
-    opacity: 1 !important;
-    width: 100%
-}
-
-#bio {
-    min-height: 108vw;
-    z-index: 19
-}
-
-@media (min-width: 1800px) {
-    #bio {
-        min-height: 103vw;
-    }
-}
-
-#coaching {
-    min-height: 51vw;
-    z-index: 18
-}
 
 #contact {
-    z-index: 15
+    z-index: 16
 }
 
 #youtube {
+    z-index: 17;
+    background: url("/img/youtube.webp");
+    background-size: contain;
+    background-repeat: repeat-y;
     min-height: 55vw;
-    z-index: 17
 }
 
-#bio,
+#youtube .text-block p{
+    font-size: 2rem;
+    margin: 15px;
+}
+
+#intro,
 #coaching,
 #youtube,
 #contact {
@@ -485,23 +337,11 @@ section h3 {
     padding-bottom: 25px;
 }
 
-.text-block p {
+.side-block p {
     margin-bottom: 10px
 }
 
-@media (min-width: 1000px) and (max-width: 1500px) {
-    #bio .text-block p {
-        font-size: 2vw;
-    }
-}
-
-@media (min-width: 600px) and (max-width: 1000px) {
-    #bio .text-block p {
-        font-size: 2.7vw;
-    }
-}
-
-.text-block {
+.side-block {
     left: 5%;
     margin-bottom: 0;
     position: relative;
@@ -509,21 +349,21 @@ section h3 {
     width: 45%
 }
 
-#contact .text-block {
+#contact .side-block {
     left: 15%;
     width: 70%
 }
 
-#contact .text-block br {
+#contact .side-block br {
     display: block !important
 }
 
-#contact .text-block p {
+#contact .side-block p {
     margin: 10px auto;
     width: 70%
 }
 
-#contact .text-block a {
+#contact .side-block a {
     color: var(--main-text-color);
     font-size: 2rem;
     font-weight: 500;
@@ -536,12 +376,12 @@ section h3 {
 }
 
 @media (max-width: 600px) {
-    #contact .text-block a {
+    #contact .side-block a {
         font-size: 1rem
     }
 }
 
-#contact .text-block a:hover {
+#contact .side-block a:hover {
     color: var(--accent-color)
 }
 
@@ -584,12 +424,12 @@ section h3 {
     transform: translateX(5px) translateY(5px)
 }
 
-#coaching .text-block {
+#coaching .side-block {
     left: calc(100% - 45% - 5%);
 }
 
 @media (max-width: 600px) {
-    .text-block p {
+    .side-block p {
         font-size: 2.5vw
     }
 
@@ -667,7 +507,7 @@ a:hover .video-img {
         transform: none !important
     }
 
-    .text-block br,
+    .side-block br,
     .deck-images a {
         display: none
     }
@@ -691,7 +531,7 @@ a:hover .video-img {
     }
 }
 
-#bio #bio-images {
+#intro #intro-images {
     align-items: flex-end;
     display: flex;
     flex-direction: column;
@@ -701,41 +541,37 @@ a:hover .video-img {
     width: 40%
 }
 
-#bio #bio-images div {
+#intro #intro-images div {
     align-items: flex-start;
     display: flex
 }
 
 @media (max-width: 1000px) {
-    #bio {
-        min-height: 190vw
-    }
-
-    #bio #bio-images div {
+    #intro #intro-images div {
         display: contents
     }
 
-    #bio #bio-images img {
+    #intro #intro-images img {
         width: 100% !important
     }
 }
 
 @media (max-width: 600px),
 (min-width: 740px) and (max-width: 1000px) {
-    #bio #bio-images img.can-be-hidden {
+    #intro #intro-images img.can-be-hidden {
         display: none
     }
 }
 
 @media (min-width: 600px) and (max-width: 740px) {
 
-    #bio #bio-images img.can-be-hidden2,
-    #bio #bio-images img.can-be-hidden {
+    #intro #intro-images img.can-be-hidden2,
+    #intro #intro-images img.can-be-hidden {
         display: none
     }
 }
 
-#bio #bio-images img {
+#intro #intro-images img {
     border: var(--main-text-color) solid 2px;
     border-radius: 6px;
     max-width: 100%
@@ -1043,18 +879,6 @@ p.name {
 #more-success,
 #benefits {
     text-align: center;
-}
-
-#intro .text-block p {
-    text-align: start;
-}
-
-#intro .side-images img {
-    width: 100%;
-}
-
-#intro .big-text {
-    font-size: 2rem;
 }
 
 .subsection {
