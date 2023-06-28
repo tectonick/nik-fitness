@@ -241,6 +241,10 @@ section h3 {
         width: 100% !important;
         font-size: 0.8rem;
     }
+
+    .side-block {
+        width: 80%;
+    }
 }
 
 #main-image-container {
@@ -282,17 +286,14 @@ section h3 {
     background: url("/img/intro.webp");
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: left;
 }
 
 #intro .text-block p, #coaching .text-block p{
     text-align: center;
     padding: 0 20px;
     margin: 30px;
-    font-size: 1.2vw;
-}
-
-#intro u, #coaching u{
-    font-size: 3vw;
+    font-size: 1.5vw;
 }
 
 #intro .side-block{
@@ -305,6 +306,7 @@ section h3 {
     background: url("/img/coaching.webp");
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: right;
 }
 
 
@@ -320,16 +322,11 @@ section h3 {
     min-height: 55vw;
 }
 
-#youtube .text-block p{
-    font-size: 2rem;
-    margin: 15px;
-}
-
 #intro,
 #coaching,
 #youtube,
 #contact {
-    padding-bottom: 50px;
+    padding-bottom: 20px;
     position: relative
 }
 
@@ -346,7 +343,11 @@ section h3 {
     margin-bottom: 0;
     position: relative;
     text-align: center;
-    width: 45%
+    width: 60%
+}
+
+#youtube .side-block{
+    width: 45%;
 }
 
 #contact .side-block {
@@ -425,17 +426,7 @@ section h3 {
 }
 
 #coaching .side-block {
-    left: calc(100% - 45% - 5%);
-}
-
-@media (max-width: 600px) {
-    .side-block p {
-        font-size: 2.5vw
-    }
-
-    p {
-        font-size: 2.5vw
-    }
+    left: calc(100% - 60%);
 }
 
 .deck-images {
@@ -513,20 +504,47 @@ a:hover .video-img {
     }
 }
 
+@media (max-width:768px) {
+    h2 {
+        font-size: 7vw;
+    }
+
+    .action-block p,  .action-block a{
+        font-size: 5vw;
+    }
+
+    #intro .side-block, #coaching .side-block, #youtube .side-block{
+        width: 90%;
+        left: 5%;
+    }
+
+    #intro .text-block p, #coaching .text-block p, #youtube .side-block p{
+        text-align: center;
+        font-size: 4.5vw;
+        margin: 0;
+    }
+
+    #youtube .deck-images {
+        position: relative;
+        width: 100%;
+        flex-direction: row;
+        left: 0;
+    }
+
+    #youtube .action-block p {
+        text-align: center;
+        margin: auto;
+    }
+}
+
 @media (min-width: 850px) and (max-width: 1050px) {
     .deck-images a:nth-child(-n+4) {
         display: block !important
     }
 }
 
-@media (min-width: 600px) and (max-width: 850px) {
-    .deck-images a:nth-child(-n+6) {
-        display: block !important
-    }
-}
-
 @media (max-width: 600px) {
-    .deck-images a:nth-child(-n+3) {
+    .deck-images a:nth-child(-n+4) {
         display: block !important
     }
 }
