@@ -251,7 +251,8 @@ section h3 {
 #main-image-container {
     background-color: #000;
     overflow: hidden;
-    z-index: 21
+    z-index: 21;
+    padding-bottom: 0;
 }
 
 #main-image-container #title-text {
@@ -1402,5 +1403,5 @@ iframe {
 }
 
 .red-shadow {
-    text-shadow: 3px 3px #400;
+    text-shadow: 2px 2px #400;
 }
