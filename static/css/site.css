@@ -67,6 +67,7 @@ p {
     font-family: Helvetica, Arial, sans-serif;
     font-size: 2rem;
     margin-bottom: 0.6rem !important;
+    text-shadow: 2px 2px black;
 }
 
 @media (min-width: 1700px) {
@@ -286,7 +287,7 @@ section h3 {
     background: url("/img/intro.webp");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: left;
+    background-position: top;
 }
 
 #intro .text-block p, #coaching .text-block p{
@@ -306,7 +307,7 @@ section h3 {
     background: url("/img/coaching.webp");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: right;
+    background-position: top;
 }
 
 
@@ -343,7 +344,7 @@ section h3 {
     margin-bottom: 0;
     position: relative;
     text-align: center;
-    width: 60%
+    width: 52%
 }
 
 #youtube .side-block{
@@ -426,7 +427,7 @@ section h3 {
 }
 
 #coaching .side-block {
-    left: calc(100% - 60%);
+    left: calc(100% - 52% - 1%);
 }
 
 .deck-images {
@@ -503,7 +504,7 @@ a:hover .video-img {
         display: none
     }
 }
-
+/* phone main */
 @media (max-width:768px) {
     h2 {
         font-size: 7vw;
@@ -512,6 +513,20 @@ a:hover .video-img {
     .action-block p,  .action-block a{
         font-size: 5vw;
     }
+    
+    #intro {
+        background: url("/img/intro_phone.webp");
+        background-size: cover;
+        background-position: top;
+        padding-bottom: 115vw !important;
+    }    
+
+    #coaching {
+        background: url("/img/coaching_phone.webp");
+        background-size: cover;
+        background-position: top;
+        padding-bottom: 105vw !important;
+    } 
 
     #intro .side-block, #coaching .side-block, #youtube .side-block{
         width: 90%;
@@ -1364,4 +1379,28 @@ iframe {
     width: 100%;
     height: auto;
     aspect-ratio: 16/9;
+}
+.brushed1, .brushed2, .brushed3 {
+    background-size: 100% 180%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.brushed1 {
+    background-image: url("/img/brushes/brush1.webp");
+}
+
+.brushed2 {
+    background-image: url("/img/brushes/brush2.webp");
+}
+
+.brushed3 {
+    background-image: url("/img/brushes/brush3.webp");
+}
+
+.fogged{
+    text-shadow: 0px 0px 70px #bfbfbf;
+}
+
+.red-shadow {
+    text-shadow: 3px 3px #400;
 }
