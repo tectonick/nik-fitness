@@ -249,7 +249,6 @@ section h3 {
 }
 
 #main-image-container {
-    background-color: #000;
     overflow: hidden;
     z-index: 21;
     padding-bottom: 0;
