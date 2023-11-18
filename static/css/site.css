@@ -38,8 +38,13 @@ body {
 }
 
 @font-face {
-    font-family: Impact;
-    src: url("/assets/impact.ttf");
+    font-family: 'Rockwell Condensed';
+    src: url("/assets/rockwell-condensed.ttf");
+}
+
+@font-face {
+    font-family: Lora;
+    src: url("/assets/lora-regular.ttf");
 }
 
 h1,
@@ -49,8 +54,7 @@ h4,
 h5,
 h6 {
     color: var(--main-text-color);
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-style: italic
+    font-family: 'Rockwell Condensed', serif;
 }
 
 p,
@@ -64,7 +68,7 @@ span {
 }
 
 p {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: Lora, 'Times New Roman', Times, serif;
     font-size: 2rem;
     margin-bottom: 0.6rem !important;
     text-shadow: 2px 2px black;
@@ -335,6 +339,27 @@ section h3 {
     padding-bottom: 25px;
 }
 
+section#hook {
+    background-image: url("/img/coaching/hook/hook.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: left;
+    background-position-y: top;
+}
+
+@media (max-width: 1140px) {
+    section#hook {
+        background-position-x: 28%;
+        padding-bottom: 0;
+    }
+}
+
+@media (max-width: 960px) {
+    section#hook {
+        background: #c4c4c4;
+    }
+}
+
 .side-block p {
     margin-bottom: 10px
 }
@@ -345,6 +370,14 @@ section h3 {
     position: relative;
     text-align: center;
     width: 52%
+}
+
+.side-block-right {
+    left: 40%;
+    margin-bottom: 0;
+    position: relative;
+    text-align: center;
+    width: 55%
 }
 
 #youtube .side-block{
@@ -1403,4 +1436,12 @@ iframe {
 
 .red-shadow {
     text-shadow: 2px 2px #400;
+}
+
+.black-background {
+    background-color: #181818;
+}
+
+.gray-background {
+    background-color: #c4c4c4;
 }
