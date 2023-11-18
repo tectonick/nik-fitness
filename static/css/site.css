@@ -358,6 +358,10 @@ section#hook {
     section#hook {
         background: #c4c4c4;
     }
+
+    section#hook p {
+        font-size: 1.3rem;
+    }
 }
 
 .side-block p {
