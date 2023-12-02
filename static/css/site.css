@@ -264,13 +264,13 @@ section h3 {
     }
 }
 
-#main-image-container {
+#about-page #main {
     overflow: hidden;
     z-index: 21;
     padding-bottom: 0;
 }
 
-#main-image-container #title-text {
+#about-page #main #title-text {
     font-weight: 700;
     left: 20%;
     position: absolute;
@@ -280,15 +280,15 @@ section h3 {
     z-index: 21
 }
 
-#main-image-container #title-text h1 {
+#about-page #main #title-text h1 {
     font-size: 6.5vw
 }
 
-#main-image-container #coaching-page #main-image {
+#about-page #main #coaching-page #main-image {
     width: 100%
 }
 
-#main-image-container #strip-image-coaching {
+#about-page #main #strip-image-coaching {
     filter: drop-shadow(2px 2px 5px #222);
     left: -28%;
     max-height: 100%;
@@ -354,6 +354,7 @@ section h3 {
 /* Side sections */
 
 section#hook {
+    z-index: 20;
     background-image: url("/img/coaching/hook/hook.webp");
 }
 
@@ -977,31 +978,48 @@ p.name {
     font-weight: bold;
 }
 
-#why {
-    z-index: 20;
-    padding-bottom: 0;
-}
-
 #success {
     z-index: 19
 }
 
-#pillars {
-    z-index: 18
+#why {
+    z-index: 18;
+    padding-bottom: 0;
 }
 
-#benefits {
+#pillars {
     z-index: 17
 }
 
-#whofor {
+#benefits {
     z-index: 16
 }
 
+#push {
+    z-index: 15
+}
+
+#whofor {
+    z-index: 14
+}
+
+#final-message {
+    z-index: 13
+}
+
 #pricing {
-    z-index: 15;
+    z-index: 12;
     display: inline-flex;
     flex-direction: column;
+}
+
+
+#faq {
+    z-index: 11
+}
+
+#coaching-page #contact {
+    z-index: 10
 }
 
 #success,
