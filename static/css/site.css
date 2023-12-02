@@ -370,6 +370,31 @@ section#hook {
     }
 }
 
+section#push {
+    background-image: url("/img/coaching/push/push.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: left;
+    background-position-y: top;
+}
+
+@media (max-width: 1140px) {
+    section#push {
+        background-position-x: 28%;
+        padding-bottom: 0;
+    }
+}
+
+@media (max-width: 960px) {
+    section#push {
+        background: #c4c4c4;
+    }
+
+    section#push p {
+        font-size: 1.3rem;
+    }
+}
+
 .side-block p {
     margin-bottom: 10px
 }
