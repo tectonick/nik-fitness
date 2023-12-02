@@ -9,6 +9,7 @@
     --texture-verbose-size: var(--texture-size), var(--texture-size), var(--texture-size), var(--texture-size);
     --main-text-color: #fff;
     --accent-color: #c41616;
+    --dark-accent-shadow: rgb(129 14 9);
     --hard-shadow: 0 2px 5px #000;
     --hard-shadow-up: 0 -2px 5px #000;
     --neon-shadow: 0 2px 20px rgb(50 4 4 / 0.4);
@@ -122,6 +123,11 @@ nav .nav-link {
     text-shadow: 1px 1px #000;
     transform: skewX(-15deg);
     transition: text-decoration .3s
+}
+
+nav .nav-item {
+    font-size: 1em;
+    margin-bottom: 0;
 }
 
 nav .nav-item:nth-of-type(1) .nav-link {
@@ -278,7 +284,7 @@ section h3 {
     font-size: 6.5vw
 }
 
-#main-image-container #main-image {
+#main-image-container #coaching-page #main-image {
     width: 100%
 }
 
@@ -808,7 +814,7 @@ footer p {
     }
 }
 
-#main-video-container {
+#coaching-page #main {
     background-color: #000;
     height: 58vw;
     overflow: hidden;
@@ -816,27 +822,54 @@ footer p {
     z-index: 22;
 }
 
-#main-video-container #main-play {
+#coaching-page #main #main-play {
     opacity: 1;
     transition: opacity 1s ease 0s;
 }
 
-#main-video-container #title-text {
+#coaching-page #main #title-text {
     position: absolute;
     top: 2.8%;
-    left: 13%;
-    width: 47%;
+    left: 2%;
+    width: 60%;
     z-index: 22;
 }
 
-#main-video-container #title-text h1 {
-    font-size: 4.9vw;
-    text-decoration: none;
-    text-align: start;
-    text-shadow: 1.5px 1.5px 3px #000;
+#coaching-page #main #free-trial-hook {
+    font-size: 5vw;
+    position: relative;
+    top: 1vw;
+    left: 10vw;
+    text-shadow: 5px 5px var(--dark-accent-shadow) !important;
+    font-weight: bold;
+
 }
 
-#main-video-container #title-text h2 {
+#coaching-page #main #key-points-list {
+    list-style: none;
+    padding-left: 0;
+}
+#coaching-page #main #key-points-list li {
+    background-image: url("/img/red-arrow-small.webp");
+    background-repeat: no-repeat;
+    background-size: 10vw;
+    padding-left: 12vw;
+    font-size: 3vw;
+    line-height: 7vw;
+    text-shadow: 5px 5px black !important;
+}
+#coaching-page #main #key-points-list li .accent{
+    text-shadow: 5px 5px black !important;
+}
+
+#coaching-page #main #title-text h1 {
+    font-size: 6vw;
+    text-decoration: none;
+    text-align: start;
+    text-shadow: 5px 5px black !important;
+}
+
+#coaching-page #main #title-text h2 {
     font-size: 2vw;
     text-decoration: none;
     text-align: start;
@@ -844,12 +877,12 @@ footer p {
     text-shadow: 3px 3px 6px #000;
 }
 
-#main-video-container #title-text #main-action-block {
+#coaching-page #main #title-text #main-action-block {
     display: flex;
     margin-top: 10px;
 }
 
-#main-video-container #title-text #main-action-block a {
+#coaching-page #main #title-text #main-action-block a {
     margin: 0;
     margin-right: 20px;
     margin-left: 0;
@@ -859,13 +892,13 @@ footer p {
 
 
 @media (max-width: 750px) {
-    #main-video-container #title-text #main-action-block a {
+    #coaching-page #main #title-text #main-action-block a {
         padding: 5px 5px;
         margin: 0 5px;
     }
 }
 
-#main-video-container #strip-image-coaching {
+#coaching-page #main #strip-image-coaching {
     filter: drop-shadow(2px 2px 5px #222);
     left: -20%;
     height: 58vw;
@@ -876,7 +909,7 @@ footer p {
     z-index: 22
 }
 
-#main-video-container #main-play-image {
+#coaching-page #main #main-play-image {
     position: absolute;
     width: 100%;
     z-index: 21;
@@ -1538,7 +1571,7 @@ iframe {
     background: linear-gradient(to top, rgb(208 29 10) 0%, rgb(154 20 7) 65%, rgb(210 167 158) 100%);
     border: rgb(206 32 15) solid 4px;
     border-radius: 25px;
-    box-shadow: inset 0px 2px rgb(129 14 9), 0px 2px rgb(129 14 9);
+    box-shadow: inset 0px 2px var(--dark-accent-shadow), 0px 2px var(--dark-accent-shadow);
     color: var(--main-text-color) !important;
     text-shadow: 
     2px 0 0 black, /*right */
