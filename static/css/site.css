@@ -239,6 +239,10 @@ section h3 {
         font-size: 5vw;
     }
 
+    section h4 {
+        font-size: 3vw;
+    }
+
     #intro .big-text {
         font-size: 1.2rem !important;
     }
@@ -1322,6 +1326,23 @@ p.name {
     #takes .row * { 
         font-size: 1rem;
     }
+}
+
+
+/* FAQ */
+.faq-question{
+    text-decoration: none;
+    color: black;
+    font-size: 2em;
+}
+.faq-question::before{
+    content: "➢";
+}
+.faq-question:hover{
+    color: var(--main-text-color);
+}
+.faq-answer-card{
+    border: 2px black solid !important;
 }
 
 /* Utility */
