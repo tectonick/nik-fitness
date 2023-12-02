@@ -1117,6 +1117,7 @@ p.name {
         padding: 0;
         margin: 0;
     }
+
 }
 
 #success h4 {
@@ -1343,6 +1344,38 @@ p.name {
 }
 .faq-answer-card{
     border: 2px black solid !important;
+}
+
+/* Perks */
+#perks {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.perk{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 12%;
+    margin: 0 2%;
+}
+
+#perks .perk .perk-text {
+    text-align: center;
+    font-size: 1em;
+}
+
+.perk-icon{
+    width: 100%;
+}
+
+
+@media (min-width: 0) and (max-width: 700px) {
+    .perk{
+        width: 24%;
+        margin: 0 4%;
+    }
 }
 
 /* Utility */
