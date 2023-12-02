@@ -60,7 +60,7 @@ h6 {
 }
 
 p,
-span {
+span, li {
     color: var(--main-text-color);
 }
 
@@ -69,7 +69,7 @@ span {
     font-size: inherit;
 }
 
-p {
+p, li {
     font-family: Lora, 'Times New Roman', Times, serif;
     font-size: 2rem;
     margin-bottom: 0.6rem !important;
@@ -77,7 +77,7 @@ p {
 }
 
 @media (min-width: 1700px) {
-    p {
+    p, li {
         font-size: 2vw
     }
 }
@@ -345,33 +345,22 @@ section h3 {
     padding-bottom: 25px;
 }
 
+/* Side sections */
+
 section#hook {
     background-image: url("/img/coaching/hook/hook.webp");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-x: left;
-    background-position-y: top;
-}
-
-@media (max-width: 1140px) {
-    section#hook {
-        background-position-x: 28%;
-        padding-bottom: 0;
-    }
-}
-
-@media (max-width: 960px) {
-    section#hook {
-        background: #c4c4c4;
-    }
-
-    section#hook p {
-        font-size: 1.3rem;
-    }
 }
 
 section#push {
     background-image: url("/img/coaching/push/push.webp");
+}
+
+section#why {
+    background-image: url("/img/coaching/why/why.webp");
+    background-position-x: right;
+}
+
+section.side-text-section {
     background-size: cover;
     background-repeat: no-repeat;
     background-position-x: left;
@@ -379,18 +368,18 @@ section#push {
 }
 
 @media (max-width: 1140px) {
-    section#push {
+    section.side-text-section {
         background-position-x: 28%;
         padding-bottom: 0;
     }
 }
 
 @media (max-width: 960px) {
-    section#push {
-        background: #c4c4c4;
+    section.side-text-section {
+        background: var(--gray-background-color) !important;
     }
 
-    section#push p {
+    section.side-text-section p {
         font-size: 1.3rem;
     }
 }
@@ -787,7 +776,8 @@ footer p {
     z-index: 21;
 }
 
-#coaching-page p {
+#coaching-page p, 
+#coaching-page li {
     font-size: 1.5rem;
 }
 
@@ -796,7 +786,8 @@ footer p {
         font-size: 1.8vw;
     }
 
-    #coaching-page p {
+    #coaching-page p, 
+    #coaching-page li {
         font-size: 1.5vw;
     }
 
@@ -812,7 +803,7 @@ footer p {
 }
 
 @media (max-width: 750px) {
-    #coaching-page p {
+    #coaching-page p, #coaching-page li {
         font-size: 1rem;
     }
 }
@@ -1352,6 +1343,14 @@ p.name {
     #takes .row * { 
         font-size: 1rem;
     }
+}
+
+/* Why list */
+#why-list {
+    list-style-type: none;
+}
+#why-list li::before {
+    content: "➢ ";
 }
 
 
