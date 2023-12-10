@@ -42,12 +42,12 @@ body {
 
 @font-face {
     font-family: 'Rockwell Condensed';
-    src: url("/assets/rockwell-condensed.ttf");
+    src: url("/fonts/rockwell-condensed.ttf");
 }
 
 @font-face {
     font-family: Lora;
-    src: url("/assets/lora-regular.ttf");
+    src: url("/fonts/lora-regular.ttf");
 }
 
 h1,
@@ -298,14 +298,6 @@ section h3 {
     z-index: 20
 }
 
-#intro {
-    z-index: 19;
-    background: url("/img/intro.webp");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top;
-}
-
 #intro .text-block p, #coaching .text-block p{
     text-align: center;
     padding: 0 20px;
@@ -320,23 +312,14 @@ section h3 {
 
 #coaching{
     z-index: 18;
-    background: url("/img/coaching.webp");
+    background: url("/img/pages/about/coaching/main.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
 }
 
-
 #contact {
     z-index: 16
-}
-
-#youtube {
-    z-index: 17;
-    background: url("/img/youtube.webp");
-    background-size: contain;
-    background-repeat: repeat-y;
-    min-height: 55vw;
 }
 
 #intro,
@@ -355,15 +338,15 @@ section h3 {
 
 section#hook {
     z-index: 20;
-    background-image: url("/img/coaching/hook/hook.webp");
+    background-image: url("/img/pages/coaching/hook/main.webp");
 }
 
 section#push {
-    background-image: url("/img/coaching/push/push.webp");
+    background-image: url("/img/pages/coaching/push/main.webp");
 }
 
 section#why {
-    background-image: url("/img/coaching/why/why.webp");
+    background-image: url("/img/pages/coaching/why/main.webp");
     background-position-x: right;
 }
 
@@ -577,20 +560,6 @@ a:hover .video-img {
     .action-block p,  .action-block a{
         font-size: 5vw;
     }
-    
-    #intro {
-        background: url("/img/intro_phone.webp");
-        background-size: cover;
-        background-position: top;
-        padding-bottom: 115vw !important;
-    }    
-
-    #coaching {
-        background: url("/img/coaching_phone.webp");
-        background-size: cover;
-        background-position: top;
-        padding-bottom: 105vw !important;
-    } 
 
     #intro .side-block, #coaching .side-block, #youtube .side-block{
         width: 90%;
@@ -851,7 +820,7 @@ footer p {
     padding-left: 0;
 }
 #coaching-page #main #key-points-list li {
-    background-image: url("/img/red-arrow-small.webp");
+    background-image: url("/img/shared/arrows/red-small.webp");
     background-repeat: no-repeat;
     background-size: 10vw;
     padding-left: 12vw;
@@ -1328,6 +1297,26 @@ p.name {
     margin: 10px 0;
 }
 
+#price-features li {
+    list-style-type: none;
+}
+
+#price-features li::before {
+    list-style-type: none;
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 1.25em auto;
+}
+
+#price-features li.feature::before {
+    content: "\A0\A0\A0\A0\A0\A0\A0";
+    background-image: url(/img/shared/icons/feature.svg);
+}
+#price-features li.none::before {
+    content: "\A0\A0\A0\A0\A0\A0";
+    background-image: url(/img/shared/icons/cross.svg);
+}
+
 .feature-icon {
     width: 20px;
     margin-right: 8px;
@@ -1476,14 +1465,14 @@ p.name {
 
 .texture-brick {
     background-color: #000;
-    background-image: url('/img/coaching/dark-brick-wall.png');
+    background-image: url('/img/shared/textures/dark-brick-wall.png');
     background-repeat: repeat;
     background-size: 10%;
 }
 
 .texture-prism {
     background-color: #000;
-    background-image: url('/img/prism.png');
+    background-image: url('/img/shared/textures/prism.png');
     background-repeat: repeat;
     background-size: 100%;
 }
@@ -1500,7 +1489,7 @@ p.name {
 
 .texture-scales {
     background-color: #000;
-    background-image: url('/img/coaching/scales.png');
+    background-image: url('/img/shared/textures/scales.png');
     background-repeat: repeat;
 }
 
@@ -1558,15 +1547,15 @@ iframe {
     background-repeat: no-repeat;
 }
 .brushed1 {
-    background-image: url("/img/brushes/brush1.webp");
+    background-image: url("/img/shared/brushes/brush1.webp");
 }
 
 .brushed2 {
-    background-image: url("/img/brushes/brush2.webp");
+    background-image: url("/img/shared/brushes/brush2.webp");
 }
 
 .brushed3 {
-    background-image: url("/img/brushes/brush3.webp");
+    background-image: url("/img/shared/brushes/brush3.webp");
 }
 
 .fogged{
