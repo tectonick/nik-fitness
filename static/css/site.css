@@ -79,7 +79,7 @@ p, li {
 
 @media (min-width: 1700px) {
     p, li {
-        font-size: 2vw
+        font-size: 1.5vw
     }
 }
 
@@ -312,7 +312,6 @@ section h3 {
 
 #coaching{
     z-index: 18;
-    background: url("/img/pages/about/coaching/main.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
@@ -326,12 +325,7 @@ section h3 {
 #coaching,
 #youtube,
 #contact {
-    padding-bottom: 20px;
     position: relative
-}
-
-#contact {
-    padding-bottom: 25px;
 }
 
 #about-page section#bio {
@@ -391,6 +385,7 @@ section#why {
 #services-page section#chat {
     z-index: 20;
     background-image: url(/img/pages/services/chat/main.webp);
+    padding-bottom: 0;
 }
 #services-page section#other {
     z-index: 19;
@@ -402,6 +397,12 @@ section.side-text-section {
     background-repeat: no-repeat;
     background-position-x: left;
     background-position-y: top;
+}
+
+@media (max-width: 960px){
+    section.side-text-section {
+        background-image: none !important;
+    }
 }
 
 @media (max-width: 1140px) {
@@ -1443,8 +1444,8 @@ p.name {
 
 .quick-review-icon {
     display: block;
-    width: 60%;
-    margin: 10px auto;
+    width: 40%;
+    margin: 20px auto;
     border-radius: 50%;
 }
 
@@ -1678,6 +1679,9 @@ iframe {
     width: 50%;
 }
 
-.mt-10 {
-    margin-top: 10rem;
+@media (min-width:992px) {
+    .mt-lg-10 {
+        margin-top: 10rem;
+    }
 }
+
