@@ -72,9 +72,9 @@ span {
 
 p, li {
     font-family: Lora, 'Times New Roman', Times, serif;
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-bottom: 0.6rem !important;
-    text-shadow: 2px 2px black;
+    text-shadow: 1px 1px black;
 }
 
 @media (min-width: 1700px) {
@@ -284,7 +284,7 @@ section h3 {
     font-size: 6.5vw
 }
 
-#about-page #main #coaching-page #main-image {
+#main-image {
     width: 100%
 }
 
@@ -337,6 +337,7 @@ section h3 {
 #about-page section#bio {
     z-index: 24;
     background-image: url("/img/pages/about/bio/main.webp");
+    background-position: right;
 }
 #about-page section#coaching {
     z-index: 23;
@@ -454,12 +455,17 @@ section.side-text-section {
     width: 70%
 }
 
-#contact .side-block a {
+.contact-link {
     color: var(--main-text-color);
     font-size: 2rem;
     font-weight: 500;
     text-decoration: none;
-    transition: color .3s
+    transition: color .3s;
+    text-shadow: 1px 1px black;
+}
+
+.contact-link:hover {
+    color: var(--accent-color)
 }
 
 #contact .action-block a {
@@ -476,9 +482,6 @@ section.side-text-section {
     color: var(--accent-color)
 }
 
-#contact .contact-img {
-    width: 32px
-}
 
 .action-block {
     margin: auto;
@@ -792,11 +795,6 @@ footer p {
 #coaching-page {
     position: relative;
     z-index: 21;
-}
-
-#coaching-page p, 
-#coaching-page li {
-    font-size: 1.5rem;
 }
 
 @media (min-width: 1700px) {
@@ -1428,10 +1426,10 @@ p.name {
 }
 
 /* Why list */
-#why-list {
+.arrow-list {
     list-style-type: none;
 }
-#why-list li::before {
+.arrow-list li::before {
     content: "➢ ";
 }
 
@@ -1678,4 +1676,8 @@ iframe {
 .purchase-block .accent-button{
     flex: none;
     width: 50%;
+}
+
+.mt-10 {
+    margin-top: 10rem;
 }
