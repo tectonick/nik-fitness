@@ -1,29 +1,52 @@
-<section id="reviews" class="in-animate side-text-section gray-background block-neon-shadow-down pb-lg-5">
+<section id="reviews"
+    class="in-animate side-text-section black-background block-neon-shadow-down pb-lg-5 carousel slide"
+    data-bs-ride="carousel">
 
-    {{> quickreview name="Amer Karma" title="Bodybuilder/Model/Entrepreneur"
-    imageName="amer.webp" imageAlt=""
-    text="
-    Nik lives and breathes fitness, is truly passionate about his craft, and cares about his clients’ results more than
-    about his own. He is reliable, trustworthy, serious, and will never let you down. You can learn so much from him,
-    since he went through a very interesting and rough journey pursuing his biggest dreams, and will help you!
-    " }}
+    <div class="carousel-inner">
+        {{> quickreview name="Amer Karma" title="Bodybuilder/Model/Entrepreneur"
+        imageName="amer.webp" imageAlt="" active="active"
+        text="
+        Nik lives and breathes fitness, is truly passionate about his craft, and cares about his clients’ results more
+        than
+        about his own. He is reliable, trustworthy, serious, and will never let you down. You can learn so much from
+        him,
+        since he went through a very interesting and rough journey pursuing his biggest dreams, and will help you!
+        " }}
 
-    {{> quickreview name="Steve Bolton" title="Entrepreneur/Investor/Celebrity Mentor"
-    imageName="steve.webp" imageAlt=""
-    text="
-    Once I got a taste of the incredible results I achieved with Nik, his knowledge, expertise, and passion, I realized
-    that he was the best coach I’ve ever had in my entire life. So, I happily referred 7 other people to work with him
-    (among them were some of my employees, business partners, friends, and even my kids). I wasn’t surprised that not a
-    single one of them failed.
-    " }}
+        {{> quickreview name="Steve Bolton" title="Entrepreneur/Investor/Celebrity Mentor"
+        imageName="steve.webp" imageAlt=""
+        text="
+        Once I got a taste of the incredible results I achieved with Nik, his knowledge, expertise, and passion, I
+        realized
+        that he was the best coach I’ve ever had in my entire life. So, I happily referred 7 other people to work with
+        him
+        (among them were some of my employees, business partners, friends, and even my kids). I wasn’t surprised that
+        not a
+        single one of them failed.
+        " }}
 
-    {{> quickreview name="Robert Falconi" title="Managing director"
-    imageName="rob.webp" imageAlt=""
-    text="
-    Nik did a tremendous job helping me bulk up and gain serious strength, even though I have a rotator cuff/shoulder
-    issue. He introduced me to many unique muscle-building techniques that helped me get results I didn’t even expect
-    while strengthening my shoulder. Also, he's a great listener, problem solver, and a fantastic motivator. I wouldn't
-    have done it without him!
-    " }}
+        {{> quickreview name="Robert Falconi" title="Managing director"
+        imageName="rob.webp" imageAlt=""
+        text="
+        Nik did a tremendous job helping me bulk up and gain serious strength, even though I have a rotator
+        cuff/shoulder
+        issue. He introduced me to many unique muscle-building techniques that helped me get results I didn’t even
+        expect
+        while strengthening my shoulder. Also, he's a great listener, problem solver, and a fantastic motivator. I
+        wouldn't
+        have done it without him!
+        " }}
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#reviews" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#reviews" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+
+
 
 </section>

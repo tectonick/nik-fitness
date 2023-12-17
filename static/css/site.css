@@ -334,6 +334,28 @@ section h3 {
     padding-bottom: 25px;
 }
 
+#about-page section#bio {
+    z-index: 24;
+    background-image: url("/img/pages/about/bio/main.webp");
+}
+#about-page section#coaching {
+    z-index: 23;
+    background-image: url("/img/pages/about/coaching/main.webp");
+}
+#about-page section#services {
+    z-index: 22;
+    background-image: url("/img/pages/about/services/main.webp");
+}
+#about-page section#referral {
+    z-index: 21;
+    background-image: url("/img/pages/about/referral/main.webp");
+}
+#about-page section#contact {
+    z-index: 20;
+    background-image: url("/img/pages/about/contact/main.webp");
+}
+
+
 /* Side sections */
 
 section#hook {
@@ -348,6 +370,30 @@ section#push {
 section#why {
     background-image: url("/img/pages/coaching/why/main.webp");
     background-position-x: right;
+}
+
+#services-page section#reviews {
+    z-index: 24;
+}
+#services-page section#call {
+    z-index: 23;
+    background-image: url(/img/pages/services/call/main.webp);
+}
+#services-page section#workout {
+    z-index: 22;
+    background-image: url(/img/pages/services/workout/main.webp);
+}
+#services-page section#feedback {
+    z-index: 21;
+    background-image: url(/img/pages/services/feedback/main.webp);
+}
+#services-page section#chat {
+    z-index: 20;
+    background-image: url(/img/pages/services/chat/main.webp);
+}
+#services-page section#other {
+    z-index: 19;
+    background-image: url(/img/pages/services/other/main.webp);
 }
 
 section.side-text-section {
@@ -365,10 +411,6 @@ section.side-text-section {
 }
 
 @media (max-width: 960px) {
-    section.side-text-section {
-        background: var(--gray-background-color) !important;
-    }
-
     section.side-text-section p {
         font-size: 1.3rem;
     }
@@ -1393,6 +1435,29 @@ p.name {
     content: "➢ ";
 }
 
+/* Carousel */
+.quick-review {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.quick-review-icon {
+    display: block;
+    width: 60%;
+    margin: 10px auto;
+    border-radius: 50%;
+}
+
+.quick-review-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
 
 /* FAQ */
 .faq-question{
@@ -1587,15 +1652,30 @@ iframe {
     0 -2px 0 black; /*bottom */
     display: block;
     font-size: 2.5vw;
-    margin: auto;
-    margin-top: 10px;
     padding: 5px;
     text-decoration: none;
     transition: box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out !important;
     width: 0%;
+    text-align: center;
 }
 
 .accent-button:hover {
     box-shadow: inset 0px 10px 15px rgb(92, 11, 6);
     border-color: white;
+}
+
+
+
+.purchase-block{
+    display: flex;
+    justify-content: space-between;
+}
+
+.purchase-block h3{
+    text-align: start;
+    margin-top: 10px;
+}
+.purchase-block .accent-button{
+    flex: none;
+    width: 50%;
 }

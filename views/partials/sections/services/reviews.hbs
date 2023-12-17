@@ -1,32 +1,45 @@
-<section id="reviews" class="in-animate side-text-section gray-background block-neon-shadow-down pb-lg-5">
+<section id="reviews"
+    class="in-animate side-text-section black-background block-neon-shadow-down pb-lg-5 carousel slide"
+    data-bs-ride="carousel">
 
-    Между главной картинкой и первой секцией – узкая секция (Фон – черный) где будут 3 быстрых отзыва, сменяющими друг
-    друга (с перерывом в 2 секунды), посередине. Картинка (только обрезать кругом), снизу картинки имя, снизу имени
-    профессия, и справа - отзыв:
+    <div class="carousel-inner">
+        {{> quickreview name="Duncan Shaw" title="Translation specialist"
+        imageName="duncan.webp" imageAlt="" active="active"
+        text="
+        Nik has transformed not just my fitness, but my life in general. I put on over 10 pounds of mostly muscle,
+        reduced
+        my waistline and body fat percentage, and found renewed energy and vitality, stress relief and a positive
+        sense of
+        direction in my health and well-being.
+        " }}
 
-    {{> quickreview name="Duncan Shaw" title="Translation specialist"
-    imageName="duncan.webp" imageAlt=""
-    text="
-    Nik has transformed not just my fitness, but my life in general. I put on over 10 pounds of mostly muscle,
-    reduced
-    my waistline and body fat percentage, and found renewed energy and vitality, stress relief and a positive
-    sense of
-    direction in my health and well-being.
-    " }}
+        {{> quickreview name="Dimitre Dintchev" title="Entrepreneur"
+        imageName="dimitre.webp" imageAlt=""
+        text="
+        Nik is one of the hardest-working guys I have had a chance to meet. By “hard work” I specifically mean him
+        always
+        going the extra mile for his clients - always present, always understanding and always capable of making the
+        right
+        adjustment needed for one’s specific case.
+        " }}
 
-    {{> quickreview name="Dimitre Dintchev" title="Entrepreneur"
-    imageName="dimitre.webp" imageAlt=""
-    text="
-    Nik is one of the hardest-working guys I have had a chance to meet. By “hard work” I specifically mean him always
-    going the extra mile for his clients - always present, always understanding and always capable of making the right
-    adjustment needed for one’s specific case.
-    " }}
+        {{> quickreview name="Neil Meldrum" title="Content marketer/copywriter"
+        imageName="neil.webp" imageAlt=""
+        text="
+        I worked with Nik for several months and he single-handedly reignited my love for fitness after several years of
+        doing very little. His program helped me achieve great results almost instantly. I'd highly recommend working
+        with
+        Nik if you're a business owner and lack inspiration or accountability with your fitness.
+        " }}
+    </div>
 
-    {{> quickreview name="Neil Meldrum" title="Content marketer/copywriter"
-    imageName="neil.webp" imageAlt=""
-    text="
-    I worked with Nik for several months and he single-handedly reignited my love for fitness after several years of
-    doing very little. His program helped me achieve great results almost instantly. I'd highly recommend working with
-    Nik if you're a business owner and lack inspiration or accountability with your fitness.
-    " }}
+    <button class="carousel-control-prev" type="button" data-bs-target="#reviews" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#reviews" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+
 </section>
