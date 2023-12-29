@@ -73,7 +73,7 @@ span {
 p, li {
     font-family: Lora, 'Times New Roman', Times, serif;
     font-size: 1.5rem;
-    margin-bottom: 0.6rem !important;
+    margin-bottom: 0.6rem;
     text-shadow: 1px 1px black;
 }
 
@@ -1435,27 +1435,65 @@ p.name {
 }
 
 /* Carousel */
-.quick-review {
+#reviews .quick-review {
     flex-direction: row;
     align-items: center;
     justify-content: center;
     width: 100%;
 }
 
-.quick-review-icon {
+#reviews .quick-review-icon {
     display: block;
-    width: 40%;
-    margin: 20px auto;
+    width: 50%;
+    margin: 10px auto 20px;
     border-radius: 50%;
 }
 
-.quick-review-text {
+#reviews .quick-review-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
+#reviews .quick-review p{
+    font-size: 0.9rem;
+}
 
+@media (min-width:576px) {
+    #reviews .quick-review p {
+        font-size: 1rem;
+    }
+
+    #reviews .quick-review-icon {
+        width: 30%;
+    }
+}
+
+@media (min-width:768px) {
+    #reviews .quick-review p {
+        font-size: 1rem;
+                margin-bottom: 0;
+    }
+
+    #reviews .quick-review-icon {
+        width: 30%;
+    }
+}
+
+@media (min-width:1200px) {
+    #reviews .quick-review p {
+        font-size: 1.2rem;
+    }
+    #reviews .quick-review-icon {
+        width: 20%;
+    }
+}
+
+@media (min-width:1400px) {
+    #reviews .quick-review p {
+        font-size: 1.5rem;
+    }
+}
 
 
 /* FAQ */
