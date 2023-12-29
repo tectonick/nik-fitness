@@ -1765,6 +1765,8 @@ iframe {
     .accent-button {
         border-width: 0;
         text-shadow: none;
+        font-size: 3.5vw;
+        padding: 10px 15px;
     }
 }
 
@@ -1793,7 +1795,7 @@ iframe {
 
 @media (max-width: 700px){
     .purchase-block h3 {
-        font-size: 4vw;
+        font-size: 3.8vw;
     }
 }
 
