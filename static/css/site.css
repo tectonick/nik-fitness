@@ -17,6 +17,7 @@
     --black-background-color: #181818;
     --gray-background-color: #c4c4c4;
     --default-text-shadow: 1px 1px 1px rgb(130, 130, 130);
+    --hard-text-shadow: 0.35vw 0.35vw 1px rgb(0, 0, 0);
 }
 
 /* Scrollbar */
@@ -89,11 +90,11 @@ p, li {
 }
 
 nav {
-    background: linear-gradient(to right, rgba(233, 41, 41, 1), rgba(233, 41, 41, 1)), url(/img/nav.webp);
+    background: rgb(52 52 52);
     background-blend-mode: multiply;
     background-repeat: no-repeat;
     background-size: cover;
-    box-shadow: var(--light-shadow);
+    box-shadow: var(--hard-shadow);
     padding: 0 9% !important;
     z-index: 22
 }
@@ -199,6 +200,7 @@ nav #logo {
     height: 28px !important;
     position: absolute !important;
     right: 10% !important;
+    filter: grayscale(1) invert(1);
 }
 
 .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
@@ -282,7 +284,7 @@ section h3 {
     left: 20%;
     position: absolute;
     text-align: center;
-    text-shadow: 0.35vw 0.35vw 3px #000;
+    text-shadow: var(--hard-text-shadow);
     top: 55%;
     z-index: 21
 }
@@ -290,7 +292,15 @@ section h3 {
 #about-page #main #title-text h1 {
     font-size: 6.5vw;
     color: rgb(245 245 245);
+}
 
+#services-page #main h1 {
+    position: absolute;
+    left: 1vw;
+    bottom: 0;
+    font-size: 5vw;
+    text-shadow: var(--hard-text-shadow);
+    color: rgb(245 245 245);
 }
 
 #main-image {
@@ -1490,7 +1500,7 @@ p.name {
 
 #reviews .quick-review-icon {
     display: block;
-    width: 50%;
+    width: 40%;
     margin: 10px auto 20px;
     border-radius: 50%;
 }
