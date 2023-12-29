@@ -16,6 +16,7 @@
     --light-shadow: 0 2px 5px #222;
     --black-background-color: #181818;
     --gray-background-color: #c4c4c4;
+    --default-text-shadow: 1px 1px 1px rgb(130, 130, 130);
 }
 
 /* Scrollbar */
@@ -74,12 +75,16 @@ p, li {
     font-family: Lora, 'Times New Roman', Times, serif;
     font-size: 1.5rem;
     margin-bottom: 0.6rem;
-    text-shadow: 1px 1px black;
+    text-shadow: var(--default-text-shadow);
 }
 
 @media (min-width: 1700px) {
     p, li {
-        font-size: 1.5vw
+        font-size: 1.7vw
+    }
+
+    #about-page p, #about-page li {
+        font-size: 1.4vw
     }
 }
 
@@ -228,6 +233,8 @@ section h2 {
     margin-bottom: 20px;
     font-size: 4vw;
     text-decoration: underline;
+    text-shadow: var(--default-text-shadow);
+
 }
 
 section h3 {
@@ -275,13 +282,15 @@ section h3 {
     left: 20%;
     position: absolute;
     text-align: center;
-    text-shadow: 1.5px 1.5px 3px #000;
+    text-shadow: 0.35vw 0.35vw 3px #000;
     top: 55%;
     z-index: 21
 }
 
 #about-page #main #title-text h1 {
-    font-size: 6.5vw
+    font-size: 6.5vw;
+    color: rgb(245 245 245);
+
 }
 
 #main-image {
@@ -387,6 +396,20 @@ section#why {
     background-image: url(/img/pages/services/chat/main.webp);
     padding-bottom: 0;
 }
+
+@media (min-width: 960px) {
+    #services-page section#chat p, li{
+        font-size: 1.2rem;
+    }
+}
+@media (min-width: 1400px) {
+    #services-page section#chat p, li{
+        font-size: 1.1vw;
+    }
+}
+
+
+
 #services-page section#other {
     z-index: 19;
     background-image: url(/img/pages/services/other/main.webp);
@@ -413,8 +436,12 @@ section.side-text-section {
 }
 
 @media (max-width: 960px) {
-    section.side-text-section p {
-        font-size: 1.3rem;
+    section.side-text-section p, section.side-text-section li {
+        font-size: 1.2rem;
+    }
+
+    section.side-text-section ul {
+        padding-left: 0;
     }
 }
 
@@ -444,7 +471,7 @@ section.side-text-section {
 
 #contact .side-block {
     left: 15%;
-    width: 70%
+    width: 75%
 }
 
 #contact .side-block br {
@@ -453,16 +480,35 @@ section.side-text-section {
 
 #contact .side-block p {
     margin: 10px auto;
-    width: 70%
+    width: 75%
+}
+
+.contact-img{
+    width: 10vw;
+    margin-right: 10px;
 }
 
 .contact-link {
     color: var(--main-text-color);
-    font-size: 2rem;
+    font-size: 6vw;
     font-weight: 500;
     text-decoration: none;
     transition: color .3s;
     text-shadow: 1px 1px black;
+}
+
+@media (min-width: 968px) {
+    .contact-link {
+        font-size: 3.2vw;
+    }
+
+    #coaching-page .contact-link {
+        font-size: 2vw;
+    }
+
+    #coaching-page .contact-img{
+        width: 5vw;
+    }
 }
 
 .contact-link:hover {
@@ -1499,17 +1545,21 @@ p.name {
 /* FAQ */
 .faq-question{
     text-decoration: none;
-    color: black;
+    color: var(--main-text-color);
+    text-shadow: var(--default-text-shadow);
     font-size: 2em;
 }
 .faq-question::before{
     content: "➢";
 }
 .faq-question:hover{
-    color: var(--main-text-color);
+    color: black;
 }
 .faq-answer-card{
     border: 2px black solid !important;
+    background: none !important;
+    font-size: 1.5rem;
+    margin: 10px;
 }
 
 /* Perks */
@@ -1678,7 +1728,7 @@ iframe {
 
 .accent-button {
     background: linear-gradient(to top, rgb(208 29 10) 0%, rgb(154 20 7) 65%, rgb(210 167 158) 100%);
-    border: rgb(206 32 15) solid 4px;
+    border: rgb(206 32 15) solid 3px;
     border-radius: 25px;
     box-shadow: inset 0px 2px var(--dark-accent-shadow), 0px 2px var(--dark-accent-shadow);
     color: var(--main-text-color) !important;
@@ -1701,11 +1751,20 @@ iframe {
     border-color: white;
 }
 
+@media (max-width: 750px) {
+    .accent-button {
+        border-width: 0;
+        text-shadow: none;
+    }
+}
+
 
 
 .purchase-block{
     display: flex;
     justify-content: space-between;
+    margin-bottom: 5px;
+    padding: 10px;
 }
 
 .purchase-block h3{
@@ -1714,7 +1773,18 @@ iframe {
 }
 .purchase-block .accent-button{
     flex: none;
-    width: 50%;
+    width: 40%;
+}
+
+.purchase-block h3 {
+    text-shadow: var(--default-text-shadow);
+    font-size: 2.3vw;
+}
+
+@media (max-width: 700px){
+    .purchase-block h3 {
+        font-size: 4vw;
+    }
 }
 
 @media (min-width:992px) {
