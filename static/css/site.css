@@ -82,7 +82,6 @@ p, li {
     font-family: Lora, 'Times New Roman', Times, serif;
     font-size: 1.5rem;
     margin-bottom: 0.6rem;
-    text-shadow: var(--default-text-shadow);
 }
 
 @media (min-width: 1700px) {
@@ -241,7 +240,6 @@ section h2 {
     margin-bottom: 20px;
     font-size: 4vw;
     text-decoration: underline;
-    text-shadow: var(--default-text-shadow);
 
 }
 
@@ -521,7 +519,6 @@ section.side-text-section {
     font-weight: 500;
     text-decoration: none;
     transition: color .3s;
-    text-shadow: 1px 1px black;
 }
 
 @media (min-width: 968px) {
@@ -787,8 +784,26 @@ footer #social-img img {
 }
 
 footer p {
-    font-size: 1rem;
+    font-size: 0.8rem;
 }
+
+a.me img {
+    position: relative;
+    bottom: 1px;
+    width: 100px;
+}
+
+@media (min-width: 768px) {
+    footer p {
+        font-size: 1.2rem;
+    }
+    a.me img {
+        width: 130px;
+        bottom: 0;
+    }
+}
+
+
 
 @keyframes in {
     0% {
@@ -1581,7 +1596,6 @@ p.name {
 .faq-question{
     text-decoration: none;
     color: var(--main-text-color);
-    text-shadow: var(--default-text-shadow);
     font-size: 2em;
 }
 .faq-question::before{
@@ -1814,7 +1828,6 @@ iframe {
 }
 
 .purchase-block h3 {
-    text-shadow: var(--default-text-shadow);
     font-size: 2.3vw;
 }
 
