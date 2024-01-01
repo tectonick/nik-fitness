@@ -19,6 +19,7 @@
     --gray-background-color: #c4c4c4;
     --default-text-shadow: 1px 1px 1px rgb(130, 130, 130);
     --hard-text-shadow: 0.35vw 0.35vw 1px rgb(0, 0, 0);
+    --hard-text-shadow-small: 0.15vw 0.15vw 1px rgb(0, 0, 0);
 }
 
 /* Scrollbar */
@@ -955,10 +956,10 @@ a.me img {
     padding-left: 12vw;
     font-size: 3vw;
     line-height: 7vw;
-    text-shadow: 5px 5px black !important;
+    text-shadow: var(--hard-text-shadow-small);
 }
 #coaching-page #main #key-points-list li .accent{
-    text-shadow: 5px 5px black !important;
+    text-shadow: var(--hard-text-shadow-small);
 }
 
 #coaching-page #main #title-text h1 {
@@ -966,7 +967,7 @@ a.me img {
     font-size: 6vw;
     text-decoration: none;
     text-align: start;
-    text-shadow: 5px 5px black !important;
+    text-shadow: var(--hard-text-shadow);
 }
 
 #coaching-page #main #title-text h2 {
