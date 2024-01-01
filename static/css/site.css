@@ -1,10 +1,5 @@
 :root {
-    --texture:
-        radial-gradient(black 15%, transparent 14%) 0 0,
-        radial-gradient(black 15%, transparent 14%) 6px 6px,
-        radial-gradient(rgba(255, 255, 255, .08) 15%, transparent 12%) 0 1px,
-        radial-gradient(rgba(255, 255, 255, .08) 15%, transparent 12%) 6px 7px,
-        rgb(12, 12, 12);
+    --texture: radial-gradient(black 15%, transparent 14%) 0 0, radial-gradient(black 15%, transparent 14%) 6px 6px, radial-gradient(rgba(255, 255, 255, .08) 15%, transparent 12%) 0 1px, radial-gradient(rgba(255, 255, 255, .08) 15%, transparent 12%) 6px 7px, rgb(12, 12, 12);
     --texture-size: 12px 12px;
     --texture-verbose-size: var(--texture-size), var(--texture-size), var(--texture-size), var(--texture-size);
     --main-text-color: #fff;
@@ -18,40 +13,38 @@
     --black-background-color: #181818;
     --gray-background-color: #c4c4c4;
     --default-text-shadow: 1px 1px 1px rgb(130, 130, 130);
-    --hard-text-shadow: 0.35vw 0.35vw 1px rgb(0, 0, 0);
-    --hard-text-shadow-small: 0.15vw 0.15vw 1px rgb(0, 0, 0);
+    --hard-text-shadow: .35vw .35vw 1px rgb(0, 0, 0);
+    --hard-text-shadow-small: .15vw .15vw 1px rgb(0, 0, 0)
 }
 
-/* Scrollbar */
 ::-webkit-scrollbar {
-    width:7px;
+    width: 7px
 }
 
 ::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.01);
+    background: rgba(0, 0, 0, 0.01)
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.5)
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #ffffff;
+    background: #ffffff
 }
 
-/* Common */
 body {
-    background-color: rgb(0, 0, 0) !important;
+    background-color: rgb(0, 0, 0) !important
 }
 
 @font-face {
     font-family: 'Rockwell Condensed';
-    src: url("/fonts/rockwell-condensed.ttf");
+    src: url(/fonts/rockwell-condensed.ttf)
 }
 
 @font-face {
     font-family: Lora;
-    src: url("/fonts/lora-regular.ttf");
+    src: url(/fonts/lora-regular.ttf)
 }
 
 h1,
@@ -59,36 +52,45 @@ h2,
 h3,
 h4 {
     color: var(--main-text-color);
-    font-family: 'Rockwell Condensed', serif;
+    font-family: 'Rockwell Condensed', serif
 }
 
 p,
-span, li {
-    color: var(--main-text-color);
+span,
+li {
+    color: var(--main-text-color)
 }
 
-.gray-background p, .gray-background h2, .gray-background h3,
-.gray-background span, .gray-background li, .gray-background a {
-    color: var(--secondary-text-color);
+.gray-background p,
+.gray-background h2,
+.gray-background h3,
+.gray-background span,
+.gray-background li,
+.gray-background a {
+    color: var(--secondary-text-color)
 }
 
 span {
     font-family: inherit;
-    font-size: inherit;
+    font-size: inherit
 }
 
-p, li {
+p,
+li {
     font-family: Lora, 'Times New Roman', Times, serif;
     font-size: 1.5rem;
-    margin-bottom: 0.6rem;
+    margin-bottom: .6rem
 }
 
 @media (min-width: 1700px) {
-    p, li {
+
+    p,
+    li {
         font-size: 1.7vw
     }
 
-    #about-page p, #about-page li {
+    #about-page p,
+    #about-page li {
         font-size: 1.4vw
     }
 }
@@ -109,7 +111,7 @@ nav .navbar-toggler {
 }
 
 nav .navbar-collapse.show {
-    margin-bottom: 10px;
+    margin-bottom: 10px
 }
 
 nav .container-fluid {
@@ -137,7 +139,7 @@ nav .nav-link {
 
 nav .nav-item {
     font-size: 1em;
-    margin-bottom: 0;
+    margin-bottom: 0
 }
 
 nav .nav-item:nth-of-type(1) .nav-link {
@@ -163,7 +165,7 @@ nav .nav-link:hover {
 
 nav ul.navbar-nav {
     margin-top: 7px !important;
-    margin-bottom: 7px !important;
+    margin-bottom: 7px !important
 }
 
 nav .nav-link.active,
@@ -177,21 +179,21 @@ nav #logo {
 
 @media (min-width: 700px) and (max-width: 992px) {
     nav {
-        flex-wrap: nowrap !important;
+        flex-wrap: nowrap !important
     }
 
     nav .nav-link {
-        padding: 1px 10px !important;
+        padding: 1px 10px !important
     }
 
     .navbar-expand-lg .navbar-collapse {
         display: flex !important;
-        flex-basis: auto;
+        flex-basis: auto
     }
 
     nav ul.navbar-nav {
         flex-direction: row !important;
-        margin: 7px 0;
+        margin: 7px 0
     }
 
     nav .navbar-toggler {
@@ -204,11 +206,11 @@ nav #logo {
     height: 28px !important;
     position: absolute !important;
     right: 10% !important;
-    filter: grayscale(1) invert(1);
+    filter: grayscale(1) invert(1)
 }
 
 .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
-    top: 3%;
+    top: 3%
 }
 
 .in-animate {
@@ -225,57 +227,56 @@ section {
     width: 100%;
     overflow: hidden;
     margin-bottom: 0;
-    padding-bottom: 10px;
+    padding-bottom: 10px
 }
 
 section h2,
 section h3 {
     margin-bottom: 20px;
-    text-align: center;
+    text-align: center
 }
 
 section h2 {
     margin-top: 20px;
     margin-bottom: 20px;
     font-size: 4vw;
-    text-decoration: underline;
-
+    text-decoration: underline
 }
 
 section h3 {
     font-size: 3vw;
     margin-bottom: 10px;
-    text-decoration: none;
+    text-decoration: none
 }
 
 @media (max-width: 700px) {
     section h2 {
-        font-size: 7vw;
+        font-size: 7vw
     }
 
     section h3 {
-        font-size: 5vw;
+        font-size: 5vw
     }
 
     section h4 {
-        font-size: 3vw;
+        font-size: 3vw
     }
 
     #contact .side-block p {
         margin: 5px auto !important;
         width: 100% !important;
-        font-size: 0.8rem;
+        font-size: .8rem
     }
 
     .side-block {
-        width: 80%;
+        width: 80%
     }
 }
 
 #about-page #main {
     overflow: hidden;
     z-index: 21;
-    padding-bottom: 0;
+    padding-bottom: 0
 }
 
 #about-page #main #title-text {
@@ -290,45 +291,44 @@ section h3 {
 
 #about-page #main #title-text h1 {
     font-size: 6.5vw;
-    color: rgb(245 245 245);
+    color: rgb(245 245 245)
 }
 
 #main h1 {
     position: absolute;
     bottom: 0;
     text-shadow: var(--hard-text-shadow);
-    color: rgb(245 245 245);
+    color: rgb(245 245 245)
 }
 
 #main span {
-    text-shadow: var(--hard-text-shadow);
+    text-shadow: var(--hard-text-shadow)
 }
 
 #services-page #main h1 {
     left: 1vw;
-    font-size: 5vw;
+    font-size: 5vw
 }
 
 #about-page #main h1 {
     left: 3vw;
-    font-size: 6vw;
+    font-size: 6vw
 }
 
 #main-image {
     width: 100%
 }
 
-#coaching{
+#coaching {
     z-index: 18;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: top;
+    background-position: top
 }
 
 #contact {
     z-index: 16
 }
-
 
 #coaching,
 #youtube,
@@ -338,108 +338,118 @@ section h3 {
 
 #about-page section#bio {
     z-index: 24;
-    background-image: url("/img/pages/about/bio/main.webp");
+    background-image: url(/img/pages/about/bio/main.webp)
 }
+
 #about-page section#coaching {
     z-index: 23;
-    background-image: url("/img/pages/about/coaching/main.webp");
+    background-image: url(/img/pages/about/coaching/main.webp)
 }
+
 #about-page section#services {
     z-index: 22;
-    background-image: url("/img/pages/about/services/main.webp");
+    background-image: url(/img/pages/about/services/main.webp)
 }
+
 #about-page section#referral {
     z-index: 21;
-    background-image: url("/img/pages/about/referral/main.webp");
+    background-image: url(/img/pages/about/referral/main.webp)
 }
+
 #about-page section#contact {
     z-index: 20;
-    background-image: url("/img/pages/about/contact/main.webp");
+    background-image: url(/img/pages/about/contact/main.webp)
 }
-
-
-/* Side sections */
 
 section#hook {
     z-index: 20;
-    background-image: url("/img/pages/coaching/hook/main.webp");
+    background-image: url(/img/pages/coaching/hook/main.webp)
 }
 
 section#push {
-    background-image: url("/img/pages/coaching/push/main.webp");
+    background-image: url(/img/pages/coaching/push/main.webp)
 }
 
 section#why {
-    background-image: url("/img/pages/coaching/why/main.webp");
-    background-position-x: right;
+    background-image: url(/img/pages/coaching/why/main.webp);
+    background-position-x: right
 }
 
 #services-page section#reviews {
-    z-index: 24;
+    z-index: 24
 }
+
 #services-page section#call {
     z-index: 23;
-    background-image: url(/img/pages/services/call/main.webp);
+    background-image: url(/img/pages/services/call/main.webp)
 }
+
 #services-page section#workout {
     z-index: 22;
-    background-image: url(/img/pages/services/workout/main.webp);
+    background-image: url(/img/pages/services/workout/main.webp)
 }
+
 #services-page section#feedback {
     z-index: 21;
-    background-image: url(/img/pages/services/feedback/main.webp);
+    background-image: url(/img/pages/services/feedback/main.webp)
 }
+
 #services-page section#chat {
     z-index: 20;
     background-image: url(/img/pages/services/chat/main.webp);
-    padding-bottom: 0;
+    padding-bottom: 0
 }
 
 @media (min-width: 960px) {
-    #services-page section#chat p, li{
-        font-size: 1.2rem;
+
+    #services-page section#chat p,
+    li {
+        font-size: 1.2rem
     }
 }
+
 @media (min-width: 1400px) {
-    #services-page section#chat p, li{
-        font-size: 1.1vw;
+
+    #services-page section#chat p,
+    li {
+        font-size: 1.1vw
     }
 }
-
-
 
 #services-page section#other {
     z-index: 19;
-    background-image: url(/img/pages/services/other/main.webp);
+    background-image: url(/img/pages/services/other/main.webp)
 }
 
 section.side-text-section {
     background-size: cover;
     background-repeat: no-repeat;
     background-position-x: left;
-    background-position-y: top;
+    background-position-y: top
 }
 
-@media (max-width: 960px){
+@media (max-width: 960px) {
     section.side-text-section {
-        background-image: none !important;
+        background-image: none !important
     }
 }
 
 @media (max-width: 1140px) {
     section.side-text-section {
         background-position-x: 28%;
-        padding-bottom: 0;
+        padding-bottom: 0
     }
 }
 
 @media (max-width: 960px) {
-    section.side-text-section p, section.side-text-section li {
-        font-size: 1.2rem;
+
+    section.side-text-section p,
+    section.side-text-section li {
+        font-size: 1.2rem
     }
 
     section.side-text-section ul {
-        padding-left: 0;
+        padding-left: 0
     }
 }
 
@@ -455,8 +465,8 @@ section.side-text-section {
     width: 52%
 }
 
-#youtube .side-block{
-    width: 45%;
+#youtube .side-block {
+    width: 45%
 }
 
 #contact .side-block {
@@ -473,9 +483,9 @@ section.side-text-section {
     width: 75%
 }
 
-.contact-img{
+.contact-img {
     width: 4vw;
-    margin-right: 10px;
+    margin-right: 10px
 }
 
 .contact-link {
@@ -483,20 +493,17 @@ section.side-text-section {
     font-size: 6vw;
     font-weight: 500;
     text-decoration: none;
-    transition: color .3s;
+    transition: color .3s
 }
 
 @media (min-width: 968px) {
-    .contact-link {
-        font-size: 2vw;
+    #coaching-page .contact-img {
+        width: 3vw
     }
 
+    .contact-link,
     #coaching-page .contact-link {
-        font-size: 2vw;
-    }
-
-    #coaching-page .contact-img{
-        width: 3vw;
+        font-size: 2vw
     }
 }
 
@@ -515,13 +522,13 @@ section.side-text-section {
 }
 
 #coaching .side-block {
-    left: calc(100% - 52% - 1%);
+    left: calc(100% - 52% - 1%)
 }
 
 .bordered-img {
     border: var(--main-text-color) solid 2px;
     border-radius: 6px;
-    transition: filter .3s;
+    transition: filter .3s
 }
 
 @media (max-width: 1050px) {
@@ -533,21 +540,22 @@ section.side-text-section {
         display: none
     }
 }
-/* phone main */
+
 @media (max-width:768px) {
     h2 {
-        font-size: 7vw;
+        font-size: 7vw
     }
 
-     #coaching .side-block, #youtube .side-block{
+    #coaching .side-block,
+    #youtube .side-block {
         width: 90%;
-        left: 5%;
+        left: 5%
     }
 
-     #youtube .side-block p{
+    #youtube .side-block p {
         text-align: center;
         font-size: 4.5vw;
-        margin: 0;
+        margin: 0
     }
 }
 
@@ -560,9 +568,8 @@ footer {
     padding: 10px 0
 }
 
-
 footer #social {
-    padding-left: 5px;
+    padding-left: 5px
 }
 
 footer #social-img {
@@ -576,26 +583,25 @@ footer #social-img img {
 }
 
 footer p {
-    font-size: 0.8rem;
+    font-size: .8rem
 }
 
 a.me img {
     position: relative;
     bottom: 1px;
-    width: 100px;
+    width: 100px
 }
 
 @media (min-width: 768px) {
     footer p {
-        font-size: 1.2rem;
+        font-size: 1.2rem
     }
+
     a.me img {
         width: 130px;
-        bottom: 0;
+        bottom: 0
     }
 }
-
-
 
 @keyframes in {
     0% {
@@ -669,39 +675,40 @@ a.me img {
 }
 
 .me img {
-    margin-bottom: 2px;
+    margin-bottom: 2px
 }
 
-/* Coaching */
 #coaching-page {
     position: relative;
-    z-index: 21;
+    z-index: 21
 }
 
 @media (min-width: 1700px) {
     #coaching-page h3 {
-        font-size: 1.8vw;
+        font-size: 1.8vw
     }
 
-    #coaching-page p, 
+    #coaching-page p,
     #coaching-page li {
-        font-size: 1.5vw;
+        font-size: 1.5vw
     }
 
     #coaching-page .testimonial .whois {
-        font-size: 1.3rem;
+        font-size: 1.3rem
     }
 }
 
 @media (min-width: 1200px) and (max-width: 1600px) {
     #coaching-page .testimonial .whois {
-        font-size: 1.1rem;
+        font-size: 1.1rem
     }
 }
 
 @media (max-width: 750px) {
-    #coaching-page p, #coaching-page li {
-        font-size: 1rem;
+
+    #coaching-page p,
+    #coaching-page li {
+        font-size: 1rem
     }
 }
 
@@ -710,7 +717,7 @@ a.me img {
     height: 58vw;
     overflow: hidden;
     padding-bottom: 48vw;
-    z-index: 22;
+    z-index: 22
 }
 
 #coaching-page #main #title-text {
@@ -718,7 +725,7 @@ a.me img {
     top: 2.8%;
     left: 2%;
     width: 60%;
-    z-index: 22;
+    z-index: 22
 }
 
 #coaching-page #main #free-trial-hook {
@@ -727,25 +734,26 @@ a.me img {
     top: 1vw;
     left: 10vw;
     text-shadow: 5px 5px var(--dark-accent-shadow) !important;
-    font-weight: bold;
-
+    font-weight: bold
 }
 
 #coaching-page #main #key-points-list {
     list-style: none;
-    padding-left: 0;
+    padding-left: 0
 }
+
 #coaching-page #main #key-points-list li {
-    background-image: url("/img/shared/arrows/red-small.webp");
+    background-image: url(/img/shared/arrows/red-small.webp);
     background-repeat: no-repeat;
     background-size: 10vw;
     padding-left: 12vw;
     font-size: 3vw;
     line-height: 7vw;
-    text-shadow: var(--hard-text-shadow-small);
+    text-shadow: var(--hard-text-shadow-small)
 }
-#coaching-page #main #key-points-list li .accent{
-    text-shadow: var(--hard-text-shadow-small);
+
+#coaching-page #main #key-points-list li .accent {
+    text-shadow: var(--hard-text-shadow-small)
 }
 
 #coaching-page #main #title-text h1 {
@@ -753,7 +761,7 @@ a.me img {
     font-size: 6vw;
     text-decoration: none;
     text-align: start;
-    text-shadow: var(--hard-text-shadow);
+    text-shadow: var(--hard-text-shadow)
 }
 
 #coaching-page #main #title-text h2 {
@@ -761,12 +769,12 @@ a.me img {
     text-decoration: none;
     text-align: start;
     margin-top: 10px;
-    text-shadow: 3px 3px 6px #000;
+    text-shadow: 3px 3px 6px #000
 }
 
 #coaching-page #main #title-text #main-action-block {
     display: flex;
-    margin-top: 10px;
+    margin-top: 10px
 }
 
 #coaching-page #main #title-text #main-action-block a {
@@ -774,14 +782,13 @@ a.me img {
     margin-right: 20px;
     margin-left: 0;
     padding: 10px 20px;
-    width: fit-content;
+    width: fit-content
 }
-
 
 @media (max-width: 750px) {
     #coaching-page #main #title-text #main-action-block a {
-        padding: 5px 5px;
-        margin: 0 5px;
+        padding: 5px;
+        margin: 0 5px
     }
 }
 
@@ -790,47 +797,52 @@ a.me img {
     width: 100%;
     z-index: 21;
     opacity: 1;
-    transition: opacity 0.1s;
-    height: 58vw;
+    transition: opacity .1s;
+    height: 58vw
 }
 
 #pillars #pillars-detailed {
-    margin-top: 25px;
+    margin-top: 25px
 }
 
-#pillars #pillars-detailed h3, #success .story-title{
-    font-size: 1.8rem;
+#pillars #pillars-detailed h3,
+#success .story-title {
+    font-size: 1.8rem
 }
 
 @media (min-width: 1700px) {
-    #pillars #pillars-detailed h3, #success .story-title{
-        font-size: 2vw;
+
+    #pillars #pillars-detailed h3,
+    #success .story-title {
+        font-size: 2vw
     }
 }
 
 @media (max-width: 768px) {
-    #pillars #pillars-detailed h3, #success .story-title{
-        font-size: 1.4rem;
+
+    #pillars #pillars-detailed h3,
+    #success .story-title {
+        font-size: 1.4rem
     }
 }
 
 .pillar {
-    margin: 25px 0;
+    margin: 25px 0
 }
 
 .pillar-text {
-    align-self: center;
+    align-self: center
 }
 
 #pillars .pillar .icon {
     width: 100%;
     margin-right: 10px;
-    align-self: center;
+    align-self: center
 }
 
 p.review,
 p.name {
-    font-weight: bold;
+    font-weight: bold
 }
 
 #success {
@@ -839,7 +851,7 @@ p.name {
 
 #why {
     z-index: 18;
-    padding-bottom: 0;
+    padding-bottom: 0
 }
 
 #pillars {
@@ -865,9 +877,8 @@ p.name {
 #pricing {
     z-index: 12;
     display: inline-flex;
-    flex-direction: column;
+    flex-direction: column
 }
-
 
 #faq {
     z-index: 11
@@ -879,7 +890,7 @@ p.name {
 
 #success,
 #benefits {
-    text-align: center;
+    text-align: center
 }
 
 #success #testimonials {
@@ -887,146 +898,144 @@ p.name {
     flex-wrap: wrap;
     justify-content: space-evenly;
     row-gap: 15px;
-    margin-bottom: 25px;
+    margin-bottom: 25px
 }
 
 #success #testimonials .testimonial {
-    width: 30%;
+    width: 30%
 }
 
 #success #testimonials .testimonial img {
-    width: 100%;
+    width: 100%
 }
 
 #benefits #benefits-items {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-evenly
 }
 
 #benefits #benefits-items .benefit {
     padding: 0 10px;
     width: 20%;
     display: flex;
-    flex-direction: column;
+    flex-direction: column
 }
 
 #benefits #benefits-items .benefit .icon {
     display: block;
     width: 50%;
     align-self: center;
-    margin-bottom: 10px;
+    margin-bottom: 10px
 }
 
 #benefits #benefits-items p {
-    font-size: 1.3rem;
+    font-size: 1.3rem
 }
 
 #success .row {
-    margin-bottom: 20px;
+    margin-bottom: 20px
 }
 
 #success .results p {
-    font-size: 1.7rem;
+    font-size: 1.7rem
 }
 
 @media (max-width: 750px) {
-    #success p {
-        font-size: 1.2rem;
-    }
 
+    #success p,
     #success .results p {
-        font-size: 1.2rem;
+        font-size: 1.2rem
     }
 }
 
 #success hr {
-    margin: 1rem auto 1rem;
+    margin: 1rem auto;
     border: 0;
     border-top: 2px solid;
     opacity: .15;
     color: white;
-    width: 100%;
+    width: 100%
 }
 
 #success .story .story-title {
     margin-top: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 30px
 }
 
 @media (max-width: 768px) {
-    #success .story .story-title{
+    #success .story .story-title {
         margin-top: 10px;
-        margin-bottom: 10px;
+        margin-bottom: 10px
     }
 }
 
 #success .story img {
-    margin-bottom: 10px;
+    margin-bottom: 10px
 }
 
 #success .story .images img {
-    width: 100%;
+    width: 100%
 }
 
 #success .story .stacked-images img {
     width: 75%;
     left: -12.5%;
     position: relative;
-    margin-bottom: -18%;
+    margin-bottom: -18%
 }
 
 #success .story .stacked-tight img {
-    margin-bottom: -20%;
+    margin-bottom: -20%
 }
 
 #success .story .stacked-images img:nth-child(2) {
-    left: 12.5%;
+    left: 12.5%
 }
 
 #success h4 {
-    font-size: 2rem !important;
+    font-size: 2rem !important
 }
 
 @media (min-width: 1050px) and (max-width: 1400px) {
     #success h4 {
-        font-size: 1.5rem !important;
+        font-size: 1.5rem !important
     }
 }
 
 @media (min-width: 0px) and (max-width: 1050px) {
     #success h4 {
-        font-size: 1.7rem !important;
+        font-size: 1.7rem !important
     }
 
     #success #transformations img {
-        width: 45%;
+        width: 45%
     }
 }
 
 @media (min-width: 0px) and (max-width: 500px) {
     #success #testimonials .testimonial {
-        width: 100%;
+        width: 100%
     }
 }
 
 @media (min-width: 500px) and (max-width: 1050px) {
     #success #testimonials .testimonial {
-        width: 45%;
+        width: 45%
     }
 
     #benefits #benefits-items .benefit {
-        width: 50%;
+        width: 50%
     }
 }
 
 @media (min-width: 0px) and (max-width: 500px) {
     #benefits #benefits-items .benefit {
-        width: 100%;
+        width: 100%
     }
 
     #benefits #benefits-items .benefit .icon {
-        width: 50%;
+        width: 50%
     }
 }
 
@@ -1034,17 +1043,17 @@ p.name {
     #success .story .stacked-images img {
         width: 100%;
         left: 0 !important;
-        margin-bottom: 15px;
+        margin-bottom: 15px
     }
 
     #pillars .pillar .icon {
         margin: 0 auto 15px;
-        align-self: center;
+        align-self: center
     }
 }
 
 .testiomial-text {
-    margin-top: 0.5rem;
+    margin-top: .5rem
 }
 
 #period-selector {
@@ -1054,7 +1063,7 @@ p.name {
     text-align: center;
     margin: auto;
     font-size: 1.5rem;
-    overflow: auto;
+    overflow: auto
 }
 
 #prices-container {
@@ -1065,7 +1074,7 @@ p.name {
     row-gap: 30px;
     column-gap: 50px;
     margin-bottom: 30px;
-    flex-wrap: wrap;
+    flex-wrap: wrap
 }
 
 .price-card {
@@ -1076,20 +1085,15 @@ p.name {
     padding: 20px;
     color: white;
     border: var(--main-text-color) solid 2px;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s, box-shadow .3s
 }
 
 @media (min-width: 768px) {
     .price-card {
         min-width: 500px;
-        width: 29%;
+        width: 29%
     }
 }
-
-/* .price-card:hover {
-    transform: scale(102%);
-    box-shadow: 0 0 11px rgba(255, 0, 0, 0.436);
-} */
 
 .period-button {
     width: 150px;
@@ -1098,300 +1102,296 @@ p.name {
     color: white;
     display: inline-block;
     background: black;
-    padding: 5px 5px;
-    margin: 0 auto;
+    padding: 5px;
+    margin: 0 auto
 }
 
-.period-button:hover, .period-button.period-selected {
+.period-button:hover,
+.period-button.period-selected {
     color: var(--main-text-color);
-    background: var(--accent-color);
+    background: var(--accent-color)
 }
 
 .feature {
-    margin: 10px 0;
+    margin: 10px 0
 }
 
 #price-features li {
-    list-style-type: none;
+    list-style-type: none
 }
 
 #price-features li::before {
     list-style-type: none;
     background-position: left top;
     background-repeat: no-repeat;
-    background-size: 1.25em auto;
+    background-size: 1.25em auto
 }
 
 #price-features li.feature::before {
     content: "\A0\A0\A0\A0\A0\A0\A0";
-    background-image: url(/img/shared/icons/feature.svg);
+    background-image: url(/img/shared/icons/feature.svg)
 }
+
 #price-features li.none::before {
     content: "\A0\A0\A0\A0\A0\A0";
-    background-image: url(/img/shared/icons/cross.svg);
+    background-image: url(/img/shared/icons/cross.svg)
 }
 
 .feature-icon {
     width: 20px;
-    margin-right: 8px;
+    margin-right: 8px
 }
 
-.price-title, .price-cost, .price-for {
-    text-align: center;
+.price-title,
+.price-cost,
+.price-for {
+    text-align: center
 }
 
 .price-title {
     font-size: 1.5rem;
     font-weight: 500;
-    text-shadow: 0px 0px 4px var(--accent-color);
+    text-shadow: 0 0 4px var(--accent-color)
 }
 
 .price-for {
     text-align: center;
-    font-size: 1rem;
+    font-size: 1rem
 }
 
 .price-cost {
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 700
 }
 
-
 .monthly-selected {
-    display: inline;
+    display: inline
 }
 
 .annually-selected {
-    display: none;
+    display: none
 }
 
 .price-best-tag {
     position: absolute;
     right: -15px;
     top: -15px;
-    background: rgb(30,150,30);
-    background: linear-gradient(90deg, rgba(30,145,30,1) 0%, rgba(60,160,60,1) 50%);
+    background: rgb(30, 150, 30);
+    background: linear-gradient(90deg, rgba(30, 145, 30, 1) 0%, rgba(60, 160, 60, 1) 50%);
     color: #fff;
     border-radius: 6px;
-    padding: 5px;
+    padding: 5px
 }
 
-#pre-prices p, #post-prices p {
-    font-size: 1.2rem;
+#pre-prices p,
+#post-prices p {
+    font-size: 1.2rem
 }
 
-/* For or Not For takes */
-#takes .row * { 
+#takes .row * {
     text-align: start;
     color: var(--main-text-color);
     font-size: 1.5rem;
-    word-wrap: break-word;
+    word-wrap: break-word
 }
 
 @media (max-width:768px) {
-    #takes .row * { 
-        font-size: 1rem;
+    #takes .row * {
+        font-size: 1rem
     }
 }
 
-/* Why list */
 .arrow-list {
-    list-style-type: none;
-}
-.arrow-list li::before {
-    content: "➢ ";
+    list-style-type: none
 }
 
-/* Carousel */
+.arrow-list li::before {
+    content: "➢ "
+}
+
 #reviews .quick-review {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 100%
 }
 
 #reviews .quick-review-icon {
     display: block;
     width: 40%;
     margin: 10px auto 20px;
-    border-radius: 50%;
+    border-radius: 50%
 }
 
 #reviews .quick-review-text {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center
 }
 
-#reviews .quick-review p{
-    font-size: 0.9rem;
+#reviews .quick-review p {
+    font-size: .9rem
 }
 
 @media (min-width:576px) {
     #reviews .quick-review p {
-        font-size: 1rem;
+        font-size: 1rem
     }
 
     #reviews .quick-review-icon {
-        width: 30%;
+        width: 30%
     }
 }
 
 @media (min-width:768px) {
     #reviews .quick-review p {
         font-size: 1rem;
-                margin-bottom: 0;
+        margin-bottom: 0
     }
 
     #reviews .quick-review-icon {
-        width: 30%;
+        width: 30%
     }
 }
 
 @media (min-width:1200px) {
     #reviews .quick-review p {
-        font-size: 1.2rem;
+        font-size: 1.2rem
     }
+
     #reviews .quick-review-icon {
-        width: 20%;
+        width: 20%
     }
 }
 
 @media (min-width:1400px) {
     #reviews .quick-review p {
-        font-size: 1.5rem;
+        font-size: 1.5rem
     }
 }
 
-
-/* FAQ */
-.faq-question{
+.faq-question {
     text-decoration: none;
     color: var(--main-text-color);
-    font-size: 2em;
+    font-size: 2em
 }
-.faq-question::before{
-    content: "➢";
+
+.faq-question::before {
+    content: "➢"
 }
-.faq-question:hover{
-    color: black;
+
+.faq-question:hover {
+    color: black
 }
-.faq-answer-card{
+
+.faq-answer-card {
     border: 2px black solid !important;
     background: none !important;
     font-size: 1.5rem;
-    margin: 10px;
+    margin: 10px
 }
 
-/* Perks */
 #perks {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: wrap
 }
 
-.perk{
+.perk {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 12%;
-    margin: 0 2%;
+    margin: 0 2%
 }
 
 #perks .perk .perk-text {
     text-align: center;
-    font-size: 1em;
+    font-size: 1em
 }
 
-.perk-icon{
-    width: 100%;
+.perk-icon {
+    width: 100%
 }
-
 
 @media (min-width: 0) and (max-width: 700px) {
-    .perk{
+    .perk {
         width: 24%;
-        margin: 0 4%;
+        margin: 0 4%
     }
 }
 
-/* Utility */
-
 .texture-prism {
     background-color: #000;
-    background-image: url('/img/shared/textures/prism.png');
+    background-image: url(/img/shared/textures/prism.png);
     background-repeat: repeat;
-    background-size: 100%;
+    background-size: 100%
 }
 
 .block-shadow-down {
-    box-shadow: var(--hard-shadow);
+    box-shadow: var(--hard-shadow)
 }
 
 .block-neon-shadow-down {
-    box-shadow: var(--neon-shadow) !important;
+    box-shadow: var(--neon-shadow) !important
 }
 
 .underline {
-    text-decoration: underline;
+    text-decoration: underline
 }
 
 .bold {
-    font-weight: bold;
+    font-weight: bold
 }
 
 .accent {
     color: var(--accent-color) !important;
-    text-shadow: 1px 1px 1px rgb(155 155 155 / 85%);
+    text-shadow: 1px 1px 1px rgb(155 155 155 / 85%)
 }
 
 .accent-box {
     border: 3px solid var(--accent-color);
     padding: 10px;
-    box-shadow: inset 0px 0px 1px 1px white;
+    box-shadow: inset 0 0 1px 1px white
 }
 
 .hidden {
-    display: none;
+    display: none
 }
 
 iframe {
     width: 100%;
     height: auto;
-    aspect-ratio: 16/9;
+    aspect-ratio: 16/9
 }
 
 .black-background {
-    background-color: var(--black-background-color);
+    background-color: var(--black-background-color)
 }
 
 .gray-background {
-    background-color: var(--gray-background-color);
+    background-color: var(--gray-background-color)
 }
 
 .accent-button {
     background: linear-gradient(to top, rgb(208 29 10) 0%, rgb(154 20 7) 65%, rgb(210 167 158) 100%);
     border: rgb(206 32 15) solid 3px;
     border-radius: 25px;
-    box-shadow: inset 0px 2px var(--dark-accent-shadow), 0px 2px var(--dark-accent-shadow);
+    box-shadow: inset 0 2px var(--dark-accent-shadow), 0 2px var(--dark-accent-shadow);
     color: var(--main-text-color) !important;
-    text-shadow: 
-    2px 0 0 black, /*right */
-    0 2px 0 black, /*top */
-    -2px 0 0 black, /*left */
-    0 -2px 0 black; /*bottom */
+    text-shadow: 2px 0 0 black, 0 2px 0 black, -2px 0 0 black, 0 -2px 0 black;
     display: block;
     font-size: 2.5vw;
     padding: 5px;
     text-decoration: none;
-    transition: box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out !important;
-    width: 0%;
-    text-align: center;
+    transition: box-shadow .3s ease-in-out, border-color .3s ease-in-out !important;
+    width: 0;
+    text-align: center
 }
 
 .accent-button:hover {
-    box-shadow: inset 0px 10px 15px rgb(92, 11, 6);
-    border-color: white;
+    box-shadow: inset 0 10px 15px rgb(92, 11, 6);
+    border-color: white
 }
 
 @media (max-width: 750px) {
@@ -1399,41 +1399,36 @@ iframe {
         border-width: 0;
         text-shadow: none;
         font-size: 3.5vw;
-        padding: 10px 15px;
+        padding: 10px 15px
     }
 }
 
-
-
-.purchase-block{
+.purchase-block {
     display: flex;
     justify-content: space-between;
     margin-bottom: 5px;
-    padding: 10px;
-}
-
-.purchase-block h3{
-    text-align: start;
-    margin-top: 10px;
-}
-.purchase-block .accent-button{
-    flex: none;
-    width: 40%;
+    padding: 10px
 }
 
 .purchase-block h3 {
-    font-size: 2.3vw;
+    text-align: start;
+    margin-top: 10px;
+    font-size: 2.3vw
 }
 
-@media (max-width: 700px){
+.purchase-block .accent-button {
+    flex: none;
+    width: 40%
+}
+
+@media (max-width: 700px) {
     .purchase-block h3 {
-        font-size: 3.8vw;
+        font-size: 3.8vw
     }
 }
 
 @media (min-width:992px) {
     .mt-lg-10 {
-        margin-top: 10rem;
+        margin-top: 10rem
     }
 }
-
