@@ -57,9 +57,7 @@ body {
 h1,
 h2,
 h3,
-h4,
-h5,
-h6 {
+h4 {
     color: var(--main-text-color);
     font-family: 'Rockwell Condensed', serif;
 }
@@ -263,10 +261,6 @@ section h3 {
         font-size: 3vw;
     }
 
-    #intro .big-text {
-        font-size: 1.2rem !important;
-    }
-
     #contact .side-block p {
         margin: 5px auto !important;
         width: 100% !important;
@@ -324,28 +318,6 @@ section h3 {
     width: 100%
 }
 
-#about-page #main #strip-image-coaching {
-    filter: drop-shadow(2px 2px 5px #222);
-    left: -28%;
-    max-height: 100%;
-    position: absolute;
-    top: 0;
-    width: 55%;
-    z-index: 20
-}
-
-#intro .text-block p, #coaching .text-block p{
-    text-align: center;
-    padding: 0 20px;
-    margin: 30px;
-    font-size: 1.5vw;
-}
-
-#intro .side-block{
-    width: 55%;
-    margin-bottom: 50px;
-}
-
 #coaching{
     z-index: 18;
     background-size: cover;
@@ -357,7 +329,7 @@ section h3 {
     z-index: 16
 }
 
-#intro,
+
 #coaching,
 #youtube,
 #contact {
@@ -483,14 +455,6 @@ section.side-text-section {
     width: 52%
 }
 
-.side-block-right {
-    left: 40%;
-    margin-bottom: 0;
-    position: relative;
-    text-align: center;
-    width: 55%
-}
-
 #youtube .side-block{
     width: 45%;
 }
@@ -540,10 +504,6 @@ section.side-text-section {
     color: var(--accent-color)
 }
 
-#contact .action-block a {
-    width: 55%;
-}
-
 @media (max-width: 600px) {
     #contact .side-block a {
         font-size: 1rem
@@ -554,62 +514,8 @@ section.side-text-section {
     color: var(--accent-color)
 }
 
-
-.action-block {
-    margin: auto;
-    width: 100%
-}
-
-.action-block p {
-    font-weight: 700;
-    margin: auto;
-    width: 70%
-}
-
-.action-block a {
-    background-color: #000;
-    border: var(--main-text-color) solid 2px;
-    border-radius: 3px;
-    box-shadow: 5px 5px #3f0909;
-    color: var(--main-text-color) !important;
-    display: block;
-    font-size: 2.5vw;
-    font-style: italic;
-    margin: auto;
-    margin-top: 10px;
-    padding: 5px;
-    text-decoration: none;
-    transition: transform 0.3s, box-shadow .3s;
-    width: 80%
-}
-
-.action-block a:hover {
-    border: var(--main-text-color) solid 2px;
-    box-shadow: none;
-    color: var(--main-text-color);
-    transform: translateX(5px) translateY(5px)
-}
-
 #coaching .side-block {
     left: calc(100% - 52% - 1%);
-}
-
-.deck-images {
-    align-items: flex-end;
-    display: flex;
-    flex-direction: column;
-    left: 5%;
-    position: absolute;
-    width: 20%
-}
-
-.deck-images a {
-    width: 100%
-}
-
-#youtube .deck-images {
-    left: calc(100% - 40% - 5%);
-    top: 20px
 }
 
 .bordered-img {
@@ -618,53 +524,12 @@ section.side-text-section {
     transition: filter .3s;
 }
 
-.deck-images img {
-    margin-bottom: -25%;
-    width: 100%
-}
-
-.video-img {
-    transition: filter .3s;
-}
-
-a:hover .video-img {
-    filter: brightness(170%)
-}
-
-#coaching .deck-images {
-    top: 50px
-}
-
-.deck-images a:nth-child(even) img,
-#youtube .deck-images a:nth-child(odd) img {
-    transform: rotateZ(10deg) translateX(75%)
-}
-
-.deck-images a:nth-child(odd) img,
-#youtube .deck-images a:nth-child(even) img {
-    transform: rotateZ(-10deg)
-}
-
 @media (max-width: 1050px) {
     section h2 {
         margin-bottom: 10px
     }
 
-    #coaching .deck-images {
-        top: 20px
-    }
-
-    .deck-images {
-        width: 40%
-    }
-
-    .deck-images img {
-        margin-bottom: 0 !important;
-        transform: none !important
-    }
-
-    .side-block br,
-    .deck-images a {
+    .side-block br {
         display: none
     }
 }
@@ -674,90 +539,16 @@ a:hover .video-img {
         font-size: 7vw;
     }
 
-    .action-block p,  .action-block a{
-        font-size: 5vw;
-    }
-
-    #intro .side-block, #coaching .side-block, #youtube .side-block{
+     #coaching .side-block, #youtube .side-block{
         width: 90%;
         left: 5%;
     }
 
-    #intro .text-block p, #coaching .text-block p, #youtube .side-block p{
+     #youtube .side-block p{
         text-align: center;
         font-size: 4.5vw;
         margin: 0;
     }
-
-    #youtube .deck-images {
-        position: relative;
-        width: 100%;
-        flex-direction: row;
-        left: 0;
-    }
-
-    #youtube .action-block p {
-        text-align: center;
-        margin: auto;
-    }
-}
-
-@media (min-width: 850px) and (max-width: 1050px) {
-    .deck-images a:nth-child(-n+4) {
-        display: block !important
-    }
-}
-
-@media (max-width: 600px) {
-    .deck-images a:nth-child(-n+4) {
-        display: block !important
-    }
-}
-
-#intro #intro-images {
-    align-items: flex-end;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    right: 5%;
-    top: 25px;
-    width: 40%
-}
-
-#intro #intro-images div {
-    align-items: flex-start;
-    display: flex
-}
-
-@media (max-width: 1000px) {
-    #intro #intro-images div {
-        display: contents
-    }
-
-    #intro #intro-images img {
-        width: 100% !important
-    }
-}
-
-@media (max-width: 600px),
-(min-width: 740px) and (max-width: 1000px) {
-    #intro #intro-images img.can-be-hidden {
-        display: none
-    }
-}
-
-@media (min-width: 600px) and (max-width: 740px) {
-
-    #intro #intro-images img.can-be-hidden2,
-    #intro #intro-images img.can-be-hidden {
-        display: none
-    }
-}
-
-#intro #intro-images img {
-    border: var(--main-text-color) solid 2px;
-    border-radius: 6px;
-    max-width: 100%
 }
 
 footer {
@@ -922,11 +713,6 @@ a.me img {
     z-index: 22;
 }
 
-#coaching-page #main #main-play {
-    opacity: 1;
-    transition: opacity 1s ease 0s;
-}
-
 #coaching-page #main #title-text {
     position: absolute;
     top: 2.8%;
@@ -999,17 +785,6 @@ a.me img {
     }
 }
 
-#coaching-page #main #strip-image-coaching {
-    filter: drop-shadow(2px 2px 5px #222);
-    left: -20%;
-    height: 58vw;
-    max-height: 100%;
-    position: absolute;
-    top: 0;
-    width: 40%;
-    z-index: 22
-}
-
 #coaching-page #main #main-play-image {
     position: absolute;
     width: 100%;
@@ -1039,32 +814,12 @@ a.me img {
     }
 }
 
-#pillars #pillars-block {
-    margin: 15px 0;
-}
-
-#pillars #pillars-block .pillars-texts {
-    font-size: 2.3vw;
-    padding: 0 3%;
-}
-
 .pillar {
     margin: 25px 0;
 }
 
-#pillars .pillars-texts .pillar-text:nth-child(2) {
-    float: right;
-}
-
 .pillar-text {
     align-self: center;
-}
-
-#pillars #pillars-block #pillars-img {
-    width: 40%;
-    max-width: 700px;
-    display: block;
-    margin: 0 auto;
 }
 
 #pillars .pillar .icon {
@@ -1123,13 +878,8 @@ p.name {
 }
 
 #success,
-#more-success,
 #benefits {
     text-align: center;
-}
-
-.subsection {
-    margin-bottom: 30px;
 }
 
 #success #testimonials {
@@ -1209,10 +959,6 @@ p.name {
         margin-top: 10px;
         margin-bottom: 10px;
     }
-}
-
-#success .story .video-img {
-    width: 100%;
 }
 
 #success .story img {
@@ -1295,21 +1041,6 @@ p.name {
         margin: 0 auto 15px;
         align-self: center;
     }
-
-    #pillars #pillars-block .pillars-texts {
-        font-size: 3.5vw;
-        padding: 0 0;
-    }
-
-    #pillars #pillars-block #pillars-img {
-        width: 70%;
-    }
-}
-
-@media (min-width: 500px) and (max-width: 775px) {
-    #pillars #pillars-block .pillars-texts {
-        font-size: 2.5vw;
-    }
 }
 
 .testiomial-text {
@@ -1335,12 +1066,6 @@ p.name {
     column-gap: 50px;
     margin-bottom: 30px;
     flex-wrap: wrap;
-}
-
-.feature-text {
-    display: inline;
-    position: relative;
-    top: 1px;
 }
 
 .price-card {
@@ -1453,11 +1178,6 @@ p.name {
 
 #pre-prices p, #post-prices p {
     font-size: 1.2rem;
-}
-
-#first-features {
-    font-size: 1.7vw !important;
-    color: rgb(226 49 49);
 }
 
 /* For or Not For takes */
@@ -1596,54 +1316,12 @@ p.name {
 }
 
 /* Utility */
-.transparent {
-    opacity: 0.01 !important;
-    transition: opacity 1s;
-}
-
-.gradient-accent-down-to-black {
-    background:
-        linear-gradient(180deg, var(--accent-color) 0%, rgba(0, 0, 0, 0.4) 100%),
-        var(--texture);
-    background-size: contain, var(--texture-verbose-size);
-}
-
-.texture-carbon {
-    background-color: #000;
-    background: var(--texture);
-    background-size: var(--texture-size);
-    box-shadow: var(--hard-shadow) var(--hard-shadow-up);
-
-}
-
-.texture-brick {
-    background-color: #000;
-    background-image: url('/img/shared/textures/dark-brick-wall.png');
-    background-repeat: repeat;
-    background-size: 10%;
-}
 
 .texture-prism {
     background-color: #000;
     background-image: url('/img/shared/textures/prism.png');
     background-repeat: repeat;
     background-size: 100%;
-}
-
-@media (max-width: 750px) {
-    .texture-brick {
-        background-size: 20%;
-    }
-
-    #first-features {
-        font-size: 1.8vw !important;
-    }
-}
-
-.texture-scales {
-    background-color: #000;
-    background-image: url('/img/shared/textures/scales.png');
-    background-repeat: repeat;
 }
 
 .block-shadow-down {
@@ -1667,56 +1345,20 @@ p.name {
     text-shadow: 1px 1px 1px rgb(155 155 155 / 85%);
 }
 
-.accent-bright {
-    color: var(--accent-color) !important;
-}
-
 .accent-box {
     border: 3px solid var(--accent-color);
     padding: 10px;
     box-shadow: inset 0px 0px 1px 1px white;
 }
 
-.w-85 {
-    width: 85%;
-}
-
 .hidden {
     display: none;
-}
-
-.rotated180 {
-    transform: rotateZ(180deg);
 }
 
 iframe {
     width: 100%;
     height: auto;
     aspect-ratio: 16/9;
-}
-.brushed1, .brushed2, .brushed3 {
-    background-size: 100% 180%;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-.brushed1 {
-    background-image: url("/img/shared/brushes/brush1.webp");
-}
-
-.brushed2 {
-    background-image: url("/img/shared/brushes/brush2.webp");
-}
-
-.brushed3 {
-    background-image: url("/img/shared/brushes/brush3.webp");
-}
-
-.fogged{
-    text-shadow: 0px 0px 25px #bfbfbf;
-}
-
-.red-shadow {
-    text-shadow: 2px 2px #400;
 }
 
 .black-background {
