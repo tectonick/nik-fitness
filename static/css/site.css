@@ -8,6 +8,7 @@
     --texture-size: 12px 12px;
     --texture-verbose-size: var(--texture-size), var(--texture-size), var(--texture-size), var(--texture-size);
     --main-text-color: #fff;
+    --secondary-text-color: #000000;
     --accent-color: #c41616;
     --dark-accent-shadow: rgb(129 14 9);
     --hard-shadow: 0 2px 5px #000;
@@ -65,6 +66,11 @@ h6 {
 p,
 span, li {
     color: var(--main-text-color);
+}
+
+.gray-background p, .gray-background h2, .gray-background h3,
+.gray-background span, .gray-background li, .gray-background a {
+    color: var(--secondary-text-color);
 }
 
 span {
@@ -294,13 +300,25 @@ section h3 {
     color: rgb(245 245 245);
 }
 
-#services-page #main h1 {
+#main h1 {
     position: absolute;
-    left: 1vw;
     bottom: 0;
-    font-size: 5vw;
     text-shadow: var(--hard-text-shadow);
     color: rgb(245 245 245);
+}
+
+#main span {
+    text-shadow: var(--hard-text-shadow);
+}
+
+#services-page #main h1 {
+    left: 1vw;
+    font-size: 5vw;
+}
+
+#about-page #main h1 {
+    left: 3vw;
+    font-size: 6vw;
 }
 
 #main-image {
@@ -350,7 +368,6 @@ section h3 {
 #about-page section#bio {
     z-index: 24;
     background-image: url("/img/pages/about/bio/main.webp");
-    background-position: right;
 }
 #about-page section#coaching {
     z-index: 23;
@@ -494,7 +511,7 @@ section.side-text-section {
 }
 
 .contact-img{
-    width: 10vw;
+    width: 4vw;
     margin-right: 10px;
 }
 
@@ -509,7 +526,7 @@ section.side-text-section {
 
 @media (min-width: 968px) {
     .contact-link {
-        font-size: 3.2vw;
+        font-size: 2vw;
     }
 
     #coaching-page .contact-link {
@@ -517,7 +534,7 @@ section.side-text-section {
     }
 
     #coaching-page .contact-img{
-        width: 5vw;
+        width: 3vw;
     }
 }
 
@@ -930,6 +947,7 @@ footer p {
 }
 
 #coaching-page #main #title-text h1 {
+    position: relative;
     font-size: 6vw;
     text-decoration: none;
     text-align: start;
@@ -1360,13 +1378,20 @@ p.name {
 
 .price-card {
     position: relative;
-    width: 390px;
+    min-width: 300px;
     background-color: black;
     border-radius: 6px;
     padding: 20px;
     color: white;
     border: var(--main-text-color) solid 2px;
     transition: transform 0.3s, box-shadow 0.3s;
+}
+
+@media (min-width: 768px) {
+    .price-card {
+        min-width: 500px;
+        width: 29%;
+    }
 }
 
 /* .price-card:hover {
