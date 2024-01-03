@@ -403,7 +403,7 @@ section#why {
 @media (min-width: 960px) {
 
     #services-page section#chat p,
-    li {
+    #services-page section#chat li {
         font-size: 1.2rem
     }
 }
@@ -411,7 +411,7 @@ section#why {
 @media (min-width: 1400px) {
 
     #services-page section#chat p,
-    li {
+    #services-page section#chat li {
         font-size: 1.1vw
     }
 }
