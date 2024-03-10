@@ -12,23 +12,22 @@ const observer = new IntersectionObserver((entries) => {
 let toAnimate = document.querySelectorAll(".in-animate");
 toAnimate.forEach((el) => observer.observe(el));
 
-
 // TODO FIX
-document.querySelectorAll("#main-action-block a").forEach(link=>{
-  link.addEventListener("click", (e)=>{
+document.querySelectorAll("#main-action-block a").forEach((link) => {
+  link.addEventListener("click", (e) => {
     e.preventDefault();
-    toAnimate.forEach(el=>{
+    toAnimate.forEach((el) => {
       el.classList.add("in-animation");
-    })
-    setTimeout(()=>{
-      let sectionId = link.href.substring(link.href.indexOf('#'));
+    });
+    setTimeout(() => {
+      let sectionId = link.href.substring(link.href.indexOf("#"));
       document.querySelector(sectionId).scrollIntoView();
-      setTimeout(()=>{
+      setTimeout(() => {
         document.querySelector(sectionId).scrollIntoView();
-      },2000)      
-    }, 1000)
-  })
-})
+      }, 2000);
+    }, 1000);
+  });
+});
 
 //Scroll to top button
 const showOnPx = 200;
@@ -39,7 +38,7 @@ const scrollContainer = () => {
   return document.documentElement || document.body;
 };
 
-document.addEventListener("scroll", () => {
+function handleScroll() {
   const scrolledPercentage =
     (scrollContainer().scrollTop /
       (scrollContainer().scrollHeight - scrollContainer().clientHeight)) *
@@ -47,12 +46,16 @@ document.addEventListener("scroll", () => {
 
   pageProgressBar.style.width = `${scrolledPercentage}%`;
 
-  if (scrollContainer().scrollTop > showOnPx) {
+  console.log(scrolledPercentage);
+
+  if (scrollContainer().scrollTop > showOnPx && scrolledPercentage < 99) {
     backToTopButton.classList.remove("hidden");
   } else {
     backToTopButton.classList.add("hidden");
   }
-});
+}
+
+document.addEventListener("scroll", handleScroll);
 
 const goToTop = () => {
   document.body.scrollIntoView();
@@ -63,19 +66,23 @@ const annuallyPrices = document.querySelectorAll(".annually-selected");
 const monthlyPricesBtn = document.querySelector("#period-monthly-btn");
 const annuallyPricesBtn = document.querySelector("#period-annually-btn");
 
-document.querySelector("#period-monthly-btn")?.addEventListener("click", (e)=>{
-  e.preventDefault();
-  monthlyPricesBtn.classList.add("period-selected");
-  annuallyPricesBtn.classList.remove("period-selected");
-  monthlyPrices.forEach(price => price.style.display = "inline");
-  annuallyPrices.forEach(price => price.style.display = "none");
-});
-document.querySelector("#period-annually-btn")?.addEventListener("click", (e)=>{
-  e.preventDefault();
-  monthlyPricesBtn.classList.remove("period-selected");
-  annuallyPricesBtn.classList.add("period-selected");
-  monthlyPrices.forEach(price => price.style.display = "none");
-  annuallyPrices.forEach(price => price.style.display = "inline");
-});;
+document
+  .querySelector("#period-monthly-btn")
+  ?.addEventListener("click", (e) => {
+    e.preventDefault();
+    monthlyPricesBtn.classList.add("period-selected");
+    annuallyPricesBtn.classList.remove("period-selected");
+    monthlyPrices.forEach((price) => (price.style.display = "inline"));
+    annuallyPrices.forEach((price) => (price.style.display = "none"));
+  });
+document
+  .querySelector("#period-annually-btn")
+  ?.addEventListener("click", (e) => {
+    e.preventDefault();
+    monthlyPricesBtn.classList.remove("period-selected");
+    annuallyPricesBtn.classList.add("period-selected");
+    monthlyPrices.forEach((price) => (price.style.display = "none"));
+    annuallyPrices.forEach((price) => (price.style.display = "inline"));
+  });
 
 backToTopButton.addEventListener("click", goToTop);

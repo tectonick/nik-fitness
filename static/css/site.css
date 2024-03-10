@@ -102,7 +102,7 @@ nav {
     background-size: cover;
     box-shadow: var(--hard-shadow);
     padding: 0 9% !important;
-    z-index: 22
+    z-index: 50
 }
 
 nav .navbar-toggler {
@@ -275,8 +275,12 @@ section h3 {
 
 #about-page #main {
     overflow: hidden;
-    z-index: 21;
+    z-index: 25;
     padding-bottom: 0
+}
+
+#services-page #main {
+    z-index: 25;
 }
 
 #about-page #main #title-text {
@@ -286,7 +290,7 @@ section h3 {
     text-align: center;
     text-shadow: var(--hard-text-shadow);
     top: 55%;
-    z-index: 21
+    z-index: 22
 }
 
 #about-page #main #title-text h1 {
@@ -484,8 +488,8 @@ section.side-text-section {
 }
 
 .contact-img {
-    width: 4vw;
-    margin-right: 10px
+    width: 9vw;
+    margin-right: 0px
 }
 
 .contact-link {
@@ -497,7 +501,7 @@ section.side-text-section {
 }
 
 @media (min-width: 968px) {
-    #coaching-page .contact-img {
+    .contact-img {
         width: 3vw
     }
 
@@ -645,7 +649,13 @@ a.me img {
     cursor: pointer;
     position: fixed;
     right: 2rem;
-    z-index: 100
+    z-index: 100;
+    opacity: .7;
+    transition: opacity .3s;
+}
+
+.back-to-top:hover {
+    opacity: .9;
 }
 
 @keyframes back-to-top-animation {
@@ -655,7 +665,7 @@ a.me img {
     }
 
     100% {
-        opacity: .8;
+        opacity: .7;
         transform: translateY(0)
     }
 }
@@ -1174,8 +1184,8 @@ p.name {
 
 .price-best-tag {
     position: absolute;
-    right: -15px;
-    top: -15px;
+    right: -12px;
+    top: -12px;
     background: rgb(30, 150, 30);
     background: linear-gradient(90deg, rgba(30, 145, 30, 1) 0%, rgba(60, 160, 60, 1) 50%);
     color: #fff;
@@ -1191,13 +1201,19 @@ p.name {
 #takes .row * {
     text-align: start;
     color: var(--main-text-color);
-    font-size: 1.5rem;
+    font-size: 0.8rem;
     word-wrap: break-word
 }
 
-@media (max-width:768px) {
+@media (min-width:768px) {
     #takes .row * {
         font-size: 1rem
+    }
+}
+
+@media (min-width:1200px) {
+    #takes .row * {
+        font-size: 1.5rem
     }
 }
 
@@ -1220,7 +1236,8 @@ p.name {
     display: block;
     width: 40%;
     margin: 10px auto 20px;
-    border-radius: 50%
+    border-radius: 50%;
+    aspect-ratio: 1;
 }
 
 #reviews .quick-review-text {
@@ -1234,7 +1251,16 @@ p.name {
 }
 
 #reviews .carousel-inner {
-    height: 450px;
+    height: 430px;
+}
+
+@media (max-width:576px) {
+
+    .carousel-control-next-icon,
+    .carousel-control-prev-icon {
+        position: relative;
+        top: -15vw;
+    }
 }
 
 @media (min-width:576px) {
@@ -1421,23 +1447,24 @@ iframe {
     display: flex;
     justify-content: space-between;
     margin-bottom: 5px;
-    padding: 10px
+    padding: 10px 0;
 }
 
 .purchase-block h3 {
     text-align: start;
     margin-top: 10px;
-    font-size: 2.3vw
+    margin-right: 5px;
+    font-size: 5.5vw;
 }
 
 .purchase-block .accent-button {
     flex: none;
-    width: 40%
+    width: 40%;
 }
 
-@media (max-width: 700px) {
+@media (min-width: 700px) {
     .purchase-block h3 {
-        font-size: 3.8vw
+        font-size: 2.3vw;
     }
 }
 
