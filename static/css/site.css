@@ -693,6 +693,16 @@ a.me img {
     z-index: 21
 }
 
+#coaching-page #testimonials .whois {
+    font-size: 0.8rem
+}
+
+@media (min-width: 1200px) {
+    #coaching-page #testimonials .whois {
+        font-size: 1rem
+    }
+}
+
 @media (min-width: 1700px) {
     #coaching-page h3 {
         font-size: 1.8vw
@@ -703,16 +713,14 @@ a.me img {
         font-size: 1.5vw
     }
 
-    #coaching-page .testimonial .whois {
-        font-size: 1.3rem
+    #coaching-page #testimonials .whois {
+        font-size: 1.2rem
     }
 }
 
-@media (min-width: 1200px) and (max-width: 1600px) {
-    #coaching-page .testimonial .whois {
-        font-size: 1.1rem
-    }
-}
+
+
+
 
 @media (max-width: 750px) {
 
